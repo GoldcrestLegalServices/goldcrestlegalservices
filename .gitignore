@@ -1,8 +1,4 @@
-index.html
-
 *.map
-
-*.min.*
 
 style/package-lock\.json
 
