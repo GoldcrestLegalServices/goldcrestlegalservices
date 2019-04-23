@@ -1,0 +1,211 @@
+doctype html
+html
+  head
+    - var description = 'Providing wills and estate planning, LPAs, estate administration and advice for the elderly and vulnerable throughout Eastbourne and surrounding areas.'
+    meta(name='viewport', content='width=device-width, initial-scale=1, user-scalable=no')
+    meta(content='text/html; charset=ISO-8859-1', http-equiv='content-type')
+    title Goldcrest Legal Services
+    meta(
+      name='keywords',
+      content='Goldcrest,Goldcrest Legal Services,Eastbourne,Free telephone consultation,Wills,trusts,estate planning,Lasting power of attorney,Estate administration and probate,advising the elderly and vulnerable,Hailsham,Polegate,Pevensey,Seaford,Willingdon,Bexhill'
+    )
+    meta(name='author', content='Marina Brierley')
+    meta(property='og:title', content='Goldcrest Legal Services')
+    meta(property='og:image', content='private/images/svg/sketch.svg')
+    meta(property='og:description', content= description)
+    meta(name='description', content= description)
+    link(rel='shortcut icon', href='private/images/svg/logo.svg')
+    link(rel='shortcut icon', href='private/images/icon.ico')
+    style
+      include style/css/style.css
+    script(async src="https://www.googletagmanager.com/gtag/js?id=UA-137023372-1")
+    script
+      include js/google_analytics.js
+    script
+      include js/script.js
+  body
+    section.colour-block.top
+      nav
+        nav
+          //- a(href='index.html#home') Home
+          a(href='index.html#what_we_do') What We Do
+          a(href='index.html#about_us') About Us
+          a(href='index.html#why_choose_us') Why Choose Us
+          a(href='index.html#contact') Contact
+        p Book your free telephone consultation - 01323 332543
+      header#home
+        div
+          img(
+            src='private/images/svg/sketch_min.svg',
+            alt='Goldcrest Legal Services Ltd logo, Serving with integrity, Eastbourne & beyond'
+          )
+        div
+    section#what_we_do
+      h2 What We Do
+      div
+        mixin what_we_do_card(num)
+          article(onclick="ShowIfMobile('show_hide_" + num + "');")
+            block
+        mixin what_we_do_card_inner(title, num)
+          h3= title
+          div(id="show_hide_" + num)
+            a.show(href="javascript:ShowInfo('show_hide_" + num + "');") More information
+            block
+            a.hide(href="javascript:HideInfo('show_hide_" + num + "');") Hide
+        +what_we_do_card(1)
+          include ./private/images/svg/what_we_do/016-book.svg
+          +what_we_do_card_inner("Wills, Trusts and Estate Planning", 1)
+            p
+              | A recent report, by Royal London, has found that over 5.4 million UK adults do not have a will and would not know where to start if they were to write one; The research indicated that 31% of those respondents who had made a will in the past, had also
+              | lived through a significant life event like marriage (which invalidates a will) or having a child. However, 53% had failed to update their will following these monumental and life changing events.
+            p
+              | Wills and estate planning can enable you to protect assets, shield loved ones from financial or practical difficulties and disputes, save tax and benefit valued individuals and causes ensuring your wishes are honoured. However, wills and estate planning
+              | isn't just about passing on money and assets but also about making the most of life right now ensuring you have enough to live on to meet your goals.
+            p
+              | Through instructing a professional, a relatively small time and financial investment today can reap manifold benefits tomorrow for those left behind and potentially for generations to come.
+        +what_we_do_card(2)
+          include ./private/images/svg/what_we_do/005-help.svg
+          +what_we_do_card_inner("Lasting Power of Attorney", 2)
+            p
+              | Sadly there are situations where people become unable to make decisions about their own affairs. not only due to old age and dementia but also as a result of accident, illness or some other mental incapacity. This can happen at any age. In some instances
+              | people can make some decisions but need help with others. A lasting Power of Attorney (LPA) is needed in these situations.
+            p
+              | There are two types of LPA, Property and Financial Affairs and a Health and Welfare. Both allow someone to manage your affairs should you no longer be able to.
+            p
+              | A little forward planning in setting up an LPA can avoid costly and time consuming court proceedings resulting in considerable stress and expense. Even essential, everyday transactions such as the use of a joint bank account can become impossible without
+              | an appropriate LPA should incapcity occur. Contact us about the two types of LPAs and how they can help protect you and your loved ones.
+        +what_we_do_card(3)
+          include ./private/images/svg/what_we_do/004-house-2.svg
+          +what_we_do_card_inner("Estate Administration and Probate", 3)
+            p
+              | The loss of a loved one is one of the most difficult experiences most of us have to face and it's particularly hard that at these times there is much to organise, administer and arrange which can be complex and time consuming.
+            p
+              | A lay person acting as an executor can find themselves dealing with a specialised and sometimes highly complex undertaking at an otherwise challenging time. This is when many will engage the services of a professional administrator to assist with the
+              | estate after bereavement.
+            p
+              | This then helps to avoid getting out of their depth and it's associated consequences and also alleviates the responsibility for getting things right for the beneficiaries some of whom might question the executor's activities. In the long term choosing
+              | a professional can save considerable time and expense. 
+              a(href='index.html#contact') Contact us to discuss further
+              | .
+        +what_we_do_card(4)
+          include ./private/images/svg/what_we_do/011-support.svg
+          +what_we_do_card_inner("Advising the Elderly and Vulnerable", 4)
+            p
+              | A recent study published in the Lancet Public Health journal, predicts that people aged 85 and over, requiring 24-hour care, will double by 2035 and a million people aged over 65 will also need similar 24-hour care by 2035.
+            p
+              | This has far reaching consequences raising issues of capacity to make decisions, advice on rules concerning care fees and how to legally mitigate them, protecting the family home and savings and arranging funeral plans.
+            p
+              | Goldcrest Legal Services endeavours to make the transition towards later life as smooth and as financially (and practically) efficient as possible. We are also able to advise on preparing wills and trusts to protect vulnerable dependents. Contact us today
+              | for further information.
+    section#about_us
+      section
+        h2 About Us
+        p
+          | Goldcrest Legal Services was founded by Marina Brierley.&nbsp;&nbsp;After obtaining a degree in Economics and Economic History at University College London, Marina went on to study law and then qualified as a solicitor.&nbsp;&nbsp;Having gained several
+          | years experience working in Local Government Housing and Housing Trust Civil Litigation Marina took a career break to raise and teach her children, whilst continuing to maintain her legal knowledge particularly in matters relating private
+          | client work.&nbsp;&nbsp;Being home rather than office based meant Marina chose to qualify with, and be regulated by the 
+          a IPW
+          |  whilst continuing as a member of the Law Society as a non-practising solicitor.
+        p
+          | Marina is motivated to provide the highest standard of service which draws from being passionate about both work and family.&nbsp;&nbsp;In her spare time she enjoys walking, reading, cooking and music.
+    section#why_choose_us
+      h2 Why Choose Us?
+      div
+        - var link_to_ipw = "javascript:ShowInfoInView('show_hide_5');"
+        mixin choose_us_card
+          article
+            block
+        mixin choose_us_card_inner
+          p
+            block
+        +choose_us_card
+          include private/images/svg/why_choose_us/002-telephone.svg
+          +choose_us_card_inner
+            | Free telephone consultation to ascertain your individual requirements. Call or e-mail to book your appointment.
+        +choose_us_card
+          include private/images/svg/why_choose_us/015-save.svg
+          +choose_us_card_inner
+            | Fewer overheads resulting in the most competitive rates. We aim to offer a favourable pricing structure but with no compromise to service.
+        +choose_us_card
+          include private/images/svg/why_choose_us/016-search.svg
+          +choose_us_card_inner
+            | Our competitive prices are provided from the outset, agreed in advance and communication continues with regular case updates throughout.
+        +choose_us_card
+          include private/images/svg/why_choose_us/001-talk.svg
+          +choose_us_card_inner
+            | Comprehensive areas of work covered yet we're small enough to offer a bespoke and individual service.
+        +choose_us_card
+          include private/images/svg/why_choose_us/007-student.svg
+          +choose_us_card_inner
+            | We specialise and as members of the 
+            a(href=link_to_ipw) IPW
+            |  we are committed to increasing our expertise through ongoing continual professional development.
+        +choose_us_card
+          include private/images/svg/why_choose_us/017-umbrella-1.svg
+          +choose_us_card_inner
+            | Under the 
+            a(href=link_to_ipw) IPW
+            |  scheme we are required to maintain both professional indemnity insurance and public liability insurance of at least &pound;2 million each.
+        +choose_us_card
+          include private/images/svg/why_choose_us/012-work.svg
+          +choose_us_card_inner
+            | We can offer our professional services in the comfort of your own home, at your offices or even in hospital in accordance with your preferences and needs.
+        +choose_us_card
+          include private/images/svg/why_choose_us/003-checklist.svg
+          +choose_us_card_inner
+            | Our one stop service includes providing funeral plans, advice on equity release and secure document storage.
+    section#part_of
+      img(src='private/images/svg/73_IPW TSI member.svg', onclick="ShowIfMobile('show_hide_5');", alt='logo')
+      p This firm complies with the IPW Code of Practice
+      #show_hide_5
+        a.show(href="javascript:ShowInfo('show_hide_5');") More information
+        p
+          | The Institute of Professional Will Writers which has been in existence for more than 25 years is a not-for-profit self-regulatory organisation, attracting members from a range of areas including private practice and financial services, as well as solicitors,
+          | barristers and accountants.
+        p
+          | Consumer protection is central and the IPW works directly with such organisations as the Legal Services Board, the Competition and Markets Authority, the Office of the Public Guardian and the Chartered Trading Standards Institute to raise and enforce
+          | standards.
+        p
+          | All members operate through a Code of Practice which is approved by the Chartered Trading Standards Institute and:
+        p
+          span carry at least &pound;2 million Professional Indemnity insurance cover per client
+        p
+          span carry at least &pound;5 million Public Liability insurance cover
+        p
+          span undergo a Criminal Records Bureau Disclosure
+        p
+          span
+            | undertake Continuous Professional Development to ensure that advice is accurate and reflects best practice
+        a.hide(href="javascript:HideInfo('show_hide_5');") Close
+    section.colour-block.foot
+      section#contact
+        h2 Contact Us
+        div
+          section.tel
+            p Tel: 01323 332543
+          section.email
+            p Email: mb@goldcrestlegal.co.uk
+          section.addr
+            div
+              p Goldcrest Legal Services Ltd
+              p 44 Willingdon Park Drive
+              p Eastbourne
+              p East Sussex
+              p BN22 0BT
+    footer
+      nav
+        a(href="#")
+          include ./private/images/svg/social_icons/twitter.svg
+          p Twitter
+        a(href="#")
+          include ./private/images/svg/social_icons/facebook.svg
+          p Facebook
+        a(href="#")
+          include ./private/images/svg/social_icons/instagram.svg
+          p Instagram
+      p Regestered in England at 2 Upperton Gardens, Eastbourne, East Sussex BN21 2AH. 
+      p
+        | Designed by 
+        a(href='https://efunb.com/') Ethan Brierley
+    script(type='text/javascript').
+      HideAll();
