@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <filter id="blur_5">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="0,5" />
+        </filter>
+    </defs>
+    <defs>
+        <filter id="blur_4">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="0,4" />
+        </filter>
+    </defs>
+    <defs>
+        <filter id="blur_3">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="0,3" />
+        </filter>
+    </defs>
+    <defs>
+        <filter id="blur_2">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="0,2" />
+        </filter>
+    </defs>
+    <defs>
+        <filter id="blur_1">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="0,1" />
+        </filter>
+    </defs>
+    <defs>
+        <filter id="blur_0">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="0,0" />
+        </filter>
+    </defs>
+</svg>
