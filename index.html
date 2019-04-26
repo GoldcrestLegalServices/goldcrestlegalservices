@@ -24,12 +24,6 @@
   font-family: LiberationSerif;
   src: url("style/fonts/liberation-serif/LiberationSerif-Regular-webfont.woff");
 }
-footer p a, #what_we_do > div article, body > section:nth-child(1) > nav a, a.show,
-a.hide {
-  transition: 0.5s;
-  transition-timing-function: ease-out;
-}
-
 #contact, #part_of, #why_choose_us, #about_us, #what_we_do, header, body > section:nth-child(1) > nav {
   max-width: 100%;
 }
@@ -43,6 +37,12 @@ a.hide {
   #contact, #part_of, #why_choose_us, #about_us, #what_we_do, header, body > section:nth-child(1) > nav {
     margin: 16px auto;
   }
+}
+
+footer p a, #what_we_do > div article, body > section:nth-child(1) > nav a, a.show,
+a.hide {
+  transition: 0.5s;
+  transition-timing-function: ease-out;
 }
 
 #why_choose_us > div, #what_we_do > div {
@@ -460,6 +460,55 @@ header img {
   }
 }
 
+@supports (display: grid) {
+  #extra_photos {
+    max-width: 100%;
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 1fr 0fr 0fr;
+    transition: 1s;
+  }
+  @media (min-width: 696px) {
+    #extra_photos {
+      margin: 16px 72px;
+      max-width: 1360px;
+    }
+  }
+  @media (min-width: 1490px) {
+    #extra_photos {
+      margin: 16px auto;
+    }
+  }
+  @media (min-width: 800px) {
+    #extra_photos {
+      grid-template-columns: 1fr 1fr 0fr;
+    }
+  }
+  @media (min-width: 1200px) {
+    #extra_photos {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+  #extra_photos div {
+    background-size: cover;
+    background-position: center;
+    display: block;
+    height: 250px;
+  }
+  #extra_photos div:nth-child(1) {
+    background-image: url("https://as1.ftcdn.net/jpg/02/16/73/38/500_F_216733837_2dVJNRxKTI5dBN6B2ms2p8infYHfM1CF.jpg");
+    background-position: right;
+  }
+  #extra_photos div:nth-child(2) {
+    background-image: url("https://as1.ftcdn.net/jpg/02/05/07/32/500_F_205073273_3uNaHYi0s0U45FWrurR5K7fhxTDy4ury.jpg");
+    background-position: center;
+  }
+  #extra_photos div:nth-child(3) {
+    background-image: url("https://as2.ftcdn.net/jpg/02/16/11/05/500_F_216110576_7BXOvhDZUzO0l0xdwYzD0RAzPtxiIX9F.jpg");
+    background-position: right;
+  }
+}
+
 #why_choose_us {
   padding-bottom: 4px;
 }
@@ -868,6 +917,11 @@ function ShowIfMobile(id) {
         </p>
         <p>Marina is motivated to provide the highest standard of service which draws from being passionate about both work and family.&nbsp;&nbsp;In her spare time she enjoys walking, reading, cooking and music.</p>
       </section>
+    </section>
+    <section id="extra_photos">
+      <div></div>
+      <div></div>
+      <div></div>
     </section>
     <section id="why_choose_us">
       <h2>Why Choose Us?</h2>

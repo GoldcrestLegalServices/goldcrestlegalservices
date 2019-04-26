@@ -22,17 +22,20 @@ $text-black: #2a2a2a
     height: $size
 
 
-%nice_transition
-    transition: .5s
-        timing-function: ease-out
-
-%section_sizing
+=section_sizing
     max-width: 100%
     @media(min-width: 696px)
         margin: 16px 72px
         max-width: 1360px
     @media(min-width: 1490px)
         margin: 16px auto
+
+%section_sizing
+    +section_sizing
+
+%nice_transition
+    transition: .5s
+        timing-function: ease-out
 
 %wrapped_flex
     display: flex
@@ -378,21 +381,34 @@ header
                 +size(100%)
 
 #extra_photos
-    @extend %section_sizing
-    display: grid
-    grid-auto-flow: column
-    div
-        background:
-            size: cover
-            position: center
-        display: block
-        height: 250px
-    div:nth-child(1)
-        background-image: url("https://as1.ftcdn.net/jpg/02/16/73/38/500_F_216733837_2dVJNRxKTI5dBN6B2ms2p8infYHfM1CF.jpg")
-    div:nth-child(2)
-        background-image: url("https://as1.ftcdn.net/jpg/02/05/07/32/500_F_205073273_3uNaHYi0s0U45FWrurR5K7fhxTDy4ury.jpg")
-    div:nth-child(3)
-        background-image: url("https://as1.ftcdn.net/jpg/02/51/98/66/500_F_251986626_xx8DB0DZBzMetIjoVDyIdC3tK6fhYFUL.jpg")
+    @supports (display: grid)
+        +section_sizing
+        display: grid
+        grid-auto-flow: column
+        grid-template-columns: 1fr 0fr 0fr
+        transition: 1s
+        @media (min-width: 800px)
+            grid-template-columns: 1fr 1fr 0fr
+        @media (min-width: 1200px)
+            grid-template-columns: 1fr 1fr 1fr
+        div
+            background:
+                size: cover
+                position: center
+            display: block
+            height: 250px
+        div:nth-child(1)
+            background:
+                image: url("https://as1.ftcdn.net/jpg/02/16/73/38/500_F_216733837_2dVJNRxKTI5dBN6B2ms2p8infYHfM1CF.jpg")
+                position: right
+        div:nth-child(2)
+            background:
+                image: url("https://as1.ftcdn.net/jpg/02/05/07/32/500_F_205073273_3uNaHYi0s0U45FWrurR5K7fhxTDy4ury.jpg")
+                position: center
+        div:nth-child(3)
+            background:
+                image: url("https://as2.ftcdn.net/jpg/02/16/11/05/500_F_216110576_7BXOvhDZUzO0l0xdwYzD0RAzPtxiIX9F.jpg")
+                position: right
 
 #why_choose_us
     @extend %section_sizing
