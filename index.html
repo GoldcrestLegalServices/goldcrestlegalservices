@@ -544,12 +544,16 @@ header img {
       height: 100%;
       padding: 0 25px;
     }
-    #contact > div section.tel {
+    #contact > div section.hours {
       grid-row: 1;
       grid-column: 1;
     }
-    #contact > div section.email {
+    #contact > div section.tel {
       grid-row: 2;
+      grid-column: 1;
+    }
+    #contact > div section.email {
+      grid-row: 3;
       grid-column: 1;
     }
     #contact > div section.addr {
@@ -571,12 +575,16 @@ header img {
       background-size: cover;
       clip-path: inset(20px 28px 20px 28px);
     }
-    #contact > div section.tel {
+    #contact > div section.hours {
       grid-row: 1;
       grid-column: 2;
     }
-    #contact > div section.email {
+    #contact > div section.tel {
       grid-row: 2;
+      grid-column: 2;
+    }
+    #contact > div section.email {
+      grid-row: 3;
       grid-column: 2;
     }
     #contact > div section.addr {
@@ -962,6 +970,9 @@ function ShowIfMobile(id) {
       <section id="contact">
         <h2>Contact Us</h2>
         <div>
+          <section class="hours">
+            <p>Hours: 9.00am to 5.30pm Monday to Friday</p>
+          </section>
           <section class="tel">
             <p>Tel: 01323 332543</p>
           </section>
