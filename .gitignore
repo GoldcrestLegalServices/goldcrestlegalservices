@@ -1,5 +1,3 @@
 *.map
 
 style/package-lock\.json
-
-style/css/style\.css
