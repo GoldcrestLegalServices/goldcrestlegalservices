@@ -377,6 +377,18 @@ header
                     position: center
                 +size(100%)
 
+#extra_photos
+    @extend %section_sizing
+    display: grid
+    grid-auto-flow: column
+    div
+        background:
+            image: url("private/images/backgrounds/hand_and_book.min.JPG")
+            size: cover
+            position: center
+        display: block
+        height: 250px
+
 #why_choose_us
     @extend %section_sizing
     padding-bottom: 4px
