@@ -302,6 +302,11 @@ header
             border-radius: 8px
             width: 320px
             margin: 8px
+            animation:
+                duration: 0.5s
+                name: cards-jump-in
+                timing-function: ease-out
+                fill-mode: both
             &:hover,
             &:active
                 box-shadow: 0 0 4.8px 0 rgba(0, 0, 0, .75)
@@ -333,6 +338,18 @@ header
                         left: 12px
                         right: 12px
                     font-size: .96em
+            @for $i from 1 through 4
+                &:nth-child(#{$i})
+                    animation-delay: (($i - 1s) / 3.5) + .1
+
+@keyframes cards-jump-in
+    0%
+        opacity: 0
+        transform: translateY(-20px) scale(0.99)
+    100%
+        opacity: 1
+        transform: translateY(0) scale(1)
+
 
 #about_us
     @extend %section_sizing
