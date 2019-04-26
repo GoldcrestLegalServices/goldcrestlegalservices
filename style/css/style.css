@@ -516,6 +516,11 @@ header img {
   margin-bottom: 8px;
   padding: 10px 15px;
 }
+#contact > div section svg {
+  display: inline-block;
+  height: 15px;
+  width: 15px;
+}
 @supports (display: grid) {
   @media (min-width: 820px) {
     #contact > div {
