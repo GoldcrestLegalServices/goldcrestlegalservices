@@ -429,13 +429,17 @@ header
 
 
 =contact_positioning($offset)
-    &.tel
+    &.hours
         grid:
             row: 1
             column: 1 + $offset
-    &.email
+    &.tel
         grid:
             row: 2
+            column: 1 + $offset
+    &.email
+        grid:
+            row: 3
             column: 1 + $offset
     &.addr
         grid:
