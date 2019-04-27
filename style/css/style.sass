@@ -22,17 +22,20 @@ $text-black: #2a2a2a
     height: $size
 
 
-%nice_transition
-    transition: .5s
-        timing-function: ease-out
-
-%section_sizing
+=section_sizing
     max-width: 100%
     @media(min-width: 696px)
         margin: 16px 72px
         max-width: 1360px
     @media(min-width: 1490px)
         margin: 16px auto
+
+%section_sizing
+    +section_sizing
+
+%nice_transition
+    transition: .5s
+        timing-function: ease-out
 
 %wrapped_flex
     display: flex
@@ -353,7 +356,7 @@ header
 
 #about_us
     @extend %section_sizing
-    $path_to_image: "private/images/backgrounds/hand_and_book.min.JPG"
+    $path_to_image: "private/images/backgrounds/marina.min.png"
     section
         margin-bottom: 0
         padding-bottom: 10px
@@ -376,6 +379,34 @@ header
                     size: cover
                     position: center
                 +size(100%)
+
+@supports (display: grid)
+    #extra_photos
+        +section_sizing
+        display: grid
+        grid-auto-flow: column
+        grid-template-columns: 0fr 1fr 0fr
+        transition: 1s
+        @media (min-width: 800px)
+            grid-template-columns: 1fr 1fr 0fr
+        @media (min-width: 1200px)
+            grid-template-columns: 1fr 1fr 1fr
+        div
+            background:
+                size: cover
+                position: center
+            display: block
+            height: 190px
+            @media (min-width: 500px)
+                height: 250px
+            &:nth-child(1)
+                background:
+                    image: url("private/images/backgrounds/butter.min.jpg")
+                    position: bottom right
+            &:nth-child(2)
+                background-image: url("private/images/backgrounds/hand_and_book.min.JPG")
+            &:nth-child(3)
+                background-image: url("private/images/backgrounds/abstract.min.jpg")
 
 #why_choose_us
     @extend %section_sizing
