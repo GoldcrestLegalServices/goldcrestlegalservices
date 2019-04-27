@@ -356,7 +356,7 @@ header
 
 #about_us
     @extend %section_sizing
-    $path_to_image: "private/images/backgrounds/hand_and_book.min.JPG"
+    $path_to_image: "private/images/backgrounds/marina.min.png"
     section
         margin-bottom: 0
         padding-bottom: 10px
@@ -385,7 +385,7 @@ header
         +section_sizing
         display: grid
         grid-auto-flow: column
-        grid-template-columns: 1fr 0fr 0fr
+        grid-template-columns: 0fr 1fr 0fr
         transition: 1s
         @media (min-width: 800px)
             grid-template-columns: 1fr 1fr 0fr
@@ -396,19 +396,17 @@ header
                 size: cover
                 position: center
             display: block
-            height: 250px
-        div:nth-child(1)
-            background:
-                image: url("https://as1.ftcdn.net/jpg/02/16/73/38/500_F_216733837_2dVJNRxKTI5dBN6B2ms2p8infYHfM1CF.jpg")
-                position: right
-        div:nth-child(2)
-            background:
-                image: url("https://as1.ftcdn.net/jpg/02/05/07/32/500_F_205073273_3uNaHYi0s0U45FWrurR5K7fhxTDy4ury.jpg")
-                position: center
-        div:nth-child(3)
-            background:
-                image: url("https://as2.ftcdn.net/jpg/02/16/11/05/500_F_216110576_7BXOvhDZUzO0l0xdwYzD0RAzPtxiIX9F.jpg")
-                position: right
+            height: 190px
+            @media (min-width: 500px)
+                height: 250px
+            &:nth-child(1)
+                background:
+                    image: url("private/images/backgrounds/butter.min.jpg")
+                    position: bottom right
+            &:nth-child(2)
+                background-image: url("private/images/backgrounds/hand_and_book.min.JPG")
+            &:nth-child(3)
+                background-image: url("private/images/backgrounds/abstract.min.jpg")
 
 #why_choose_us
     @extend %section_sizing
