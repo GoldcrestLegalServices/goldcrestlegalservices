@@ -346,10 +346,6 @@ header img {
   border-radius: 8px;
   width: 320px;
   margin: 8px;
-  animation-duration: 0.5s;
-  animation-name: cards-jump-in;
-  animation-timing-function: ease-out;
-  animation-fill-mode: both;
 }
 @supports (color: black) {
   #what_we_do > div article {
@@ -393,29 +389,37 @@ header img {
   margin-right: 12px;
   font-size: 0.96em;
 }
-#what_we_do > div article:nth-child(1) {
-  animation-delay: 0.1s;
-}
-#what_we_do > div article:nth-child(2) {
-  animation-delay: 0.3857142857s;
-}
-#what_we_do > div article:nth-child(3) {
-  animation-delay: 0.6714285714s;
-}
-#what_we_do > div article:nth-child(4) {
-  animation-delay: 0.9571428571s;
+@supports not (-ms-ime-align: auto) {
+  #what_we_do > div article {
+    animation-duration: 0.5s;
+    animation-name: cards-jump-in;
+    animation-timing-function: ease-out;
+    animation-fill-mode: both;
+  }
+  #what_we_do > div article:nth-child(1) {
+    animation-delay: 0.1s;
+  }
+  #what_we_do > div article:nth-child(2) {
+    animation-delay: 0.3857142857s;
+  }
+  #what_we_do > div article:nth-child(3) {
+    animation-delay: 0.6714285714s;
+  }
+  #what_we_do > div article:nth-child(4) {
+    animation-delay: 0.9571428571s;
+  }
+  @keyframes cards-jump-in {
+    0% {
+      opacity: 0;
+      transform: translateY(-20px) scale(0.99);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
 }
 
-@keyframes cards-jump-in {
-  0% {
-    opacity: 0;
-    transform: translateY(-20px) scale(0.99);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-  }
-}
 #about_us section {
   margin-bottom: 0;
   padding-bottom: 10px;
@@ -487,14 +491,14 @@ header img {
     }
   }
   #extra_photos div:nth-child(1) {
-    background-image: url("private/images/backgrounds/butter.min.jpg");
-    background-position: bottom right;
+    background-image: url("private/images/backgrounds/flower.min.jpg");
+    background-position: top;
   }
   #extra_photos div:nth-child(2) {
     background-image: url("private/images/backgrounds/hand_and_book.min.JPG");
   }
   #extra_photos div:nth-child(3) {
-    background-image: url("private/images/backgrounds/abstract.min.jpg");
+    background-image: url("private/images/backgrounds/elderly.min.jpeg");
   }
 }
 #why_choose_us {
