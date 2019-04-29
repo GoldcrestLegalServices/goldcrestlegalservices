@@ -390,7 +390,9 @@ header
         display: grid
         grid-auto-flow: column
         grid-template-columns: 0fr 1fr 0fr
-        transition: 1s
+        transition:
+            property: grid-template-columns
+            duration: 1s
         @media (min-width: 800px)
             grid-template-columns: 1fr 1fr 0fr
         @media (min-width: 1200px)

@@ -456,7 +456,8 @@ header img {
     display: grid;
     grid-auto-flow: column;
     grid-template-columns: 0fr 1fr 0fr;
-    transition: 1s;
+    transition-property: grid-template-columns;
+    transition-duration: 1s;
   }
   @media (min-width: 696px) {
     #extra_photos {
