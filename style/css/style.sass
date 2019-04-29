@@ -390,7 +390,9 @@ header
         display: grid
         grid-auto-flow: column
         grid-template-columns: 0fr 1fr 0fr
-        transition: 1s
+        transition:
+            property: grid-template-columns
+            duration: 1s
         @media (min-width: 800px)
             grid-template-columns: 1fr 1fr 0fr
         @media (min-width: 1200px)
@@ -405,12 +407,12 @@ header
                 height: 250px
             &:nth-child(1)
                 background:
-                    image: url("private/images/backgrounds/flower.min.jpg")
+                    image: url("private/images/backgrounds/butter.min.jpg")
                     position: top
             &:nth-child(2)
                 background-image: url("private/images/backgrounds/hand_and_book.min.JPG")
             &:nth-child(3)
-                background-image: url("private/images/backgrounds/elderly.min.jpeg")
+                background-image: url("private/images/backgrounds/blue.min.jpg")
 
 #why_choose_us
     @extend %section_sizing
