@@ -14,6 +14,10 @@ $text-black: #2a2a2a
     @supports(color: black)
         @content
 
+=not_for_edge_hack
+    @supports not (-ms-ime-align: auto)
+        @content
+
 =bounce
     transition-timing-function: cubic-bezier(1,1.85,.34,-.03)
 
@@ -305,11 +309,6 @@ header
             border-radius: 8px
             width: 320px
             margin: 8px
-            animation:
-                duration: 0.5s
-                name: cards-jump-in
-                timing-function: ease-out
-                fill-mode: both
             &:hover,
             &:active
                 box-shadow: 0 0 4.8px 0 rgba(0, 0, 0, .75)
@@ -341,17 +340,22 @@ header
                         left: 12px
                         right: 12px
                     font-size: .96em
-            @for $i from 1 through 4
-                &:nth-child(#{$i})
-                    animation-delay: (($i - 1s) / 3.5) + .1
-
-@keyframes cards-jump-in
-    0%
-        opacity: 0
-        transform: translateY(-20px) scale(0.99)
-    100%
-        opacity: 1
-        transform: translateY(0) scale(1)
+            +not_for_edge_hack
+                animation:
+                    duration: 0.5s
+                    name: cards-jump-in
+                    timing-function: ease-out
+                    fill-mode: both
+                @for $i from 1 through 4
+                    &:nth-child(#{$i})
+                        animation-delay: (($i - 1s) / 3.5) + .1
+                @keyframes cards-jump-in
+                    0%
+                        opacity: 0
+                        transform: translateY(-20px) scale(0.99)
+                    100%
+                        opacity: 1
+                        transform: translateY(0) scale(1)
 
 
 #about_us
