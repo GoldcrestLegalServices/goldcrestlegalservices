@@ -1,4 +1,4 @@
-start cmd /k sass style/css:style/css --style compressed
+start cmd /k sass style/css: --style compressed
 timeout 5
 start cmd /k pug index.pug
 timeout 5
