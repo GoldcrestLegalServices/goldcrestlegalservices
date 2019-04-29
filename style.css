@@ -491,14 +491,14 @@ header img {
     }
   }
   #extra_photos div:nth-child(1) {
-    background-image: url("private/images/backgrounds/butter.min.jpg");
-    background-position: bottom right;
+    background-image: url("private/images/backgrounds/flower.min.jpg");
+    background-position: top;
   }
   #extra_photos div:nth-child(2) {
     background-image: url("private/images/backgrounds/hand_and_book.min.JPG");
   }
   #extra_photos div:nth-child(3) {
-    background-image: url("private/images/backgrounds/abstract.min.jpg");
+    background-image: url("private/images/backgrounds/elderly.min.jpeg");
   }
 }
 #why_choose_us {
