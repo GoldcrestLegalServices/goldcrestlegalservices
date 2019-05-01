@@ -1,7 +1,8 @@
 doctype html
 html(lang="en")
   head
-    - var description = 'Providing wills and estate planning, LPAs, estate administration and advice for the elderly and vulnerable throughout Eastbourne and surrounding areas.'
+    - var description = 'Providing Wills and estate planning, LPAs, estate administration and advice for the elderly and vulnerable throughout Eastbourne and surrounding areas.'
+    - var link_to_ipw = "javascript:ShowInfoInView('show_hide_5');"
     meta(name='viewport', content='width=device-width, initial-scale=1')
     meta(content='text/html; charset=utf-8', http-equiv='content-type')
     title Goldcrest Legal Services
@@ -55,10 +56,10 @@ html(lang="en")
           include ./private/images/svg/what_we_do/016-book.svg
           +what_we_do_card_inner("Wills, Trusts and Estate Planning", 1)
             p
-              | A recent report, by Royal London, has found that over 5.4 million UK adults do not have a will and would not know where to start if they were to write one; The research indicated that 31% of those respondents who had made a will in the past, had also
-              | lived through a significant life event like marriage (which invalidates a will) or having a child. However, 53% had failed to update their will following these monumental and life changing events.
+              | A recent report, by Royal London, has found that over 5.4 million UK adults do not have a Will and would not know where to start if they were to write one; The research indicated that 31% of those respondents who had made a Will in the past, had also
+              | lived through a significant life event like marriage (which invalidates a Will) or having a child. However, 53% had failed to update their Will following these monumental and life changing events.
             p
-              | Wills and estate planning can enable you to protect assets, shield loved ones from financial or practical difficulties and disputes, save tax and benefit valued individuals and causes ensuring your wishes are honoured. However, wills and estate planning
+              | Wills and estate planning can enable you to protect assets, shield loved ones from financial or practical difficulties and disputes, save tax and benefit valued individuals and causes ensuring your wishes are honoured. However, Wills and estate planning
               | isn't just about passing on money and assets but also about making the most of life right now ensuring you have enough to live on to meet your goals.
             p
               | Through instructing a professional, a relatively small time and financial investment today can reap manifold benefits tomorrow for those left behind and potentially for generations to come.
@@ -79,7 +80,7 @@ html(lang="en")
             p
               | The loss of a loved one is one of the most difficult experiences most of us have to face and it's particularly hard that at these times there is much to organise, administer and arrange which can be complex and time consuming.
             p
-              | A lay person acting as an executor can find themselves dealing with a specialised and sometimes highly complex undertaking at an otherwise challenging time. This is when many will engage the services of a professional administrator to assist with the
+              | A lay person acting as an executor can find themselves dealing with a specialised and sometimes highly complex undertaking at an otherwise challenging time. This is when many Will engage the services of a professional administrator to assist with the
               | estate after bereavement.
             p
               | This then helps to avoid getting out of their depth and it's associated consequences and also alleviates the responsibility for getting things right for the beneficiaries some of whom might question the executor's activities. In the long term choosing
@@ -90,20 +91,20 @@ html(lang="en")
           include ./private/images/svg/what_we_do/011-support.svg
           +what_we_do_card_inner("Advising the Elderly and Vulnerable", 4)
             p
-              | A recent study published in the Lancet Public Health journal, predicts that people aged 85 and over, requiring 24-hour care, will double by 2035 and a million people aged over 65 will also need similar 24-hour care by 2035.
+              | A recent study published in the Lancet Public Health journal, predicts that people aged 85 and over, requiring 24-hour care, Will double by 2035 and a million people aged over 65 Will also need similar 24-hour care by 2035.
             p
               | This has far reaching consequences raising issues of capacity to make decisions, advice on rules concerning care fees and how to legally mitigate them, protecting the family home and savings and arranging funeral plans.
             p
-              | Goldcrest Legal Services endeavours to make the transition towards later life as smooth and as financially (and practically) efficient as possible. We are also able to advise on preparing wills and trusts to protect vulnerable dependents. Contact us today
+              | Goldcrest Legal Services endeavours to make the transition towards later life as smooth and as financially (and practically) efficient as possible. We are also able to advise on preparing Wills and trusts to protect vulnerable dependents. Contact us today
               | for further information.
     section#about_us
       section
         h2 About Us
         p
-          | Goldcrest Legal Services was founded by Marina Brierley.&nbsp;&nbsp;After obtaining a degree in Economics and Economic History at University College London, Marina went on to study law and then qualified as a solicitor.&nbsp;&nbsp;Having gained several
+          | Goldcrest Legal Services was founded by Marina Brierley.&nbsp;&nbsp;After obtaining a degree in Economics and Economic History at University College London, Marina went on to study law and then qualified as a solicitor in 1995.&nbsp;&nbsp;Having gained several
           | years experience working in Local Government Housing and Housing Trust Civil Litigation Marina took a career break to raise and teach her children, whilst continuing to maintain her legal knowledge particularly in matters relating private
           | client work.&nbsp;&nbsp;Being home rather than office based meant Marina chose to qualify with, and be regulated by the 
-          a IPW
+          a(href=link_to_ipw) IPW
           |  whilst continuing as a member of the Law Society as a non-practising solicitor.
         p
           | Marina is motivated to provide the highest standard of service which draws from being passionate about both work and family.&nbsp;&nbsp;In her spare time she enjoys walking, reading, cooking and music.
@@ -114,7 +115,6 @@ html(lang="en")
     section#why_choose_us
       h2 Why Choose Us?
       div
-        - var link_to_ipw = "javascript:ShowInfoInView('show_hide_5');"
         mixin choose_us_card
           article
             block
