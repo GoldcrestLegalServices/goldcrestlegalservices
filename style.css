@@ -430,6 +430,10 @@ header img {
   padding-right: 16px;
   font-size: 18px;
 }
+#about_us section p a {
+  text-decoration: none;
+  color: #0404d9;
+}
 @supports (display: grid) {
   @media (min-width: 1040px) {
     #about_us {
