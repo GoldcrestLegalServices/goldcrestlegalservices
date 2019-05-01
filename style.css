@@ -434,6 +434,9 @@ header img {
   text-decoration: none;
   color: #0404d9;
 }
+#about_us section p a:active, #about_us section p a:hover {
+  text-decoration: underline;
+}
 @supports (display: grid) {
   @media (min-width: 1040px) {
     #about_us {
