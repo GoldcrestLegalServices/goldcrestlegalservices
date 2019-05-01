@@ -609,6 +609,10 @@ header img {
       grid-row: 1/4;
       grid-column: 2;
     }
+    #contact > div section.addr p {
+      margin-top: 8px;
+      margin-bottom: 8px;
+    }
   }
   @media (min-width: 1180px) {
     #contact > div {
