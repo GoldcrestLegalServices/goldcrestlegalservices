@@ -579,6 +579,21 @@ header img {
   margin-bottom: 8px;
   padding: 10px 15px;
 }
+#contact > div section.addr p:nth-child(1) {
+  margin-bottom: 3px;
+}
+#contact > div section.addr p:nth-child(2) {
+  font-size: 0.7em;
+  margin-top: 3px;
+}
+#contact > div section.addr p:nth-child(2):after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #aaa;
+  margin-top: 4px;
+}
 @supports (display: grid) {
   @media (min-width: 820px) {
     #contact > div {
