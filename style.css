@@ -1,13 +1,16 @@
 @font-face {
   font-family: Roboto;
+  font-display: swap;
   src: url("style/fonts/Roboto/Roboto-Regular.ttf");
 }
 @font-face {
   font-family: LiberationSerifBold;
+  font-display: swap;
   src: url("style/fonts/liberation-serif/LiberationSerif-Bold-webfont.woff");
 }
 @font-face {
   font-family: LiberationSerif;
+  font-display: swap;
   src: url("style/fonts/liberation-serif/LiberationSerif-Regular-webfont.woff");
 }
 #contact, #part_of, #why_choose_us, #about_us, #what_we_do, header, body > section:nth-child(1) > nav {
