@@ -450,8 +450,8 @@ header img {
     #about_us::after {
       content: "";
       grid-column: 2;
-      background-image: url("private/images/backgrounds/marina.min.png");
-      background-image: linear-gradient(to left, rgba(237, 237, 237, 0) 0%, rgba(237, 237, 237, 0) 90%, #ededed 100%), url("private/images/backgrounds/marina.min.png");
+      background-image: url("private/images/backgrounds/marina.min.jpg");
+      background-image: linear-gradient(to left, rgba(237, 237, 237, 0) 0%, rgba(237, 237, 237, 0) 90%, #ededed 100%), url("private/images/backgrounds/marina.min.jpg");
       background-size: cover;
       background-position: center;
       width: 100%;

@@ -10,6 +10,7 @@ files:
     width: 1000
   -
     path: 'private\images\backgrounds\marina.png'
+    output: 'private\images\backgrounds\marina.min.jpg'
     height: 350
   -
     path: 'private\images\backgrounds\hand_and_book.JPG'
