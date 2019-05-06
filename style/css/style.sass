@@ -514,9 +514,10 @@ header
                         background-color: #aaa
                         margin-top: 4px
             &.hours span
-                font-size: 1em
+                display: block
+                font-size: 0.7em
         @supports (display: grid)
-            @media (min-width: 820px)
+            @media (min-width: 1000px)
                 +grid
                     template:
                         columns: repeat(2, 1fr)
@@ -532,7 +533,9 @@ header
                         margin:
                             top: 8px
                             bottom: 8px
-            @media (min-width: 1180px)
+                    &.hours span
+                        text-align: center
+            @media (min-width: 1290px)
                 grid-template-columns: repeat(3, 1fr)
                 margin-top: 0
                 &::after

@@ -597,8 +597,12 @@ header img {
   background-color: #aaa;
   margin-top: 4px;
 }
+#contact > div section.hours span {
+  display: block;
+  font-size: 0.7em;
+}
 @supports (display: grid) {
-  @media (min-width: 820px) {
+  @media (min-width: 1000px) {
     #contact > div {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -631,8 +635,11 @@ header img {
       margin-top: 8px;
       margin-bottom: 8px;
     }
+    #contact > div section.hours span {
+      text-align: center;
+    }
   }
-  @media (min-width: 1180px) {
+  @media (min-width: 1290px) {
     #contact > div {
       grid-template-columns: repeat(3, 1fr);
       margin-top: 0;
