@@ -635,9 +635,6 @@ header img {
       margin-top: 8px;
       margin-bottom: 8px;
     }
-    #contact > div section.hours span {
-      text-align: center;
-    }
   }
   @media (min-width: 1290px) {
     #contact > div {
