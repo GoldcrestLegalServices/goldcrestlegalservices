@@ -13,17 +13,17 @@
   font-display: swap;
   src: url("style/fonts/liberation-serif/LiberationSerif-Regular-webfont.woff");
 }
-#contact, #part_of, #why_choose_us, #about_us, #what_we_do, header, body > section:nth-child(1) > nav {
+#contact, #part_of, #why_choose_us, #we_can_help_if, #about_us, #what_we_do, header, body > section:nth-child(1) > nav {
   max-width: 100%;
 }
 @media (min-width: 696px) {
-  #contact, #part_of, #why_choose_us, #about_us, #what_we_do, header, body > section:nth-child(1) > nav {
+  #contact, #part_of, #why_choose_us, #we_can_help_if, #about_us, #what_we_do, header, body > section:nth-child(1) > nav {
     margin: 16px 72px;
     max-width: 1360px;
   }
 }
 @media (min-width: 1490px) {
-  #contact, #part_of, #why_choose_us, #about_us, #what_we_do, header, body > section:nth-child(1) > nav {
+  #contact, #part_of, #why_choose_us, #we_can_help_if, #about_us, #what_we_do, header, body > section:nth-child(1) > nav {
     margin: 16px auto;
   }
 }
@@ -56,6 +56,20 @@ body {
 
 #part_of, header {
   box-sizing: content-box;
+}
+
+#we_can_help_if p, #about_us section p {
+  padding: 4px;
+  padding-left: 16px;
+  padding-right: 16px;
+  font-size: 18px;
+}
+#we_can_help_if p a, #about_us section p a {
+  text-decoration: none;
+  color: #0404d9;
+}
+#we_can_help_if p a:active, #about_us section p a:active, #we_can_help_if p a:hover, #about_us section p a:hover {
+  text-decoration: underline;
 }
 
 a.show,
@@ -204,7 +218,7 @@ body > section h2 {
   body > section h2 {
     width: 160px;
   }
-  body > section#why_choose_us h2 {
+  body > section#why_choose_us h2, body > section#we_can_help_if h2 {
     width: 240px;
   }
 }
@@ -426,19 +440,6 @@ header img {
 #about_us section {
   margin-bottom: 0;
   padding-bottom: 10px;
-}
-#about_us section p {
-  padding: 4px;
-  padding-left: 16px;
-  padding-right: 16px;
-  font-size: 18px;
-}
-#about_us section p a {
-  text-decoration: none;
-  color: #0404d9;
-}
-#about_us section p a:active, #about_us section p a:hover {
-  text-decoration: underline;
 }
 @supports (display: grid) {
   @media (min-width: 1040px) {
