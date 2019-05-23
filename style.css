@@ -58,17 +58,17 @@ body {
   box-sizing: content-box;
 }
 
-#we_can_help_if p, #about_us section p {
+#we_can_help_if p, #about_us section p, #we_can_help_if li, #about_us section li {
   padding: 4px;
   padding-left: 16px;
   padding-right: 16px;
   font-size: 18px;
 }
-#we_can_help_if p a, #about_us section p a {
+#we_can_help_if p a, #about_us section p a, #we_can_help_if li a, #about_us section li a {
   text-decoration: none;
   color: #0404d9;
 }
-#we_can_help_if p a:active, #about_us section p a:active, #we_can_help_if p a:hover, #about_us section p a:hover {
+#we_can_help_if p a:active, #about_us section p a:active, #we_can_help_if p a:hover, #about_us section p a:hover, #we_can_help_if li a:active, #about_us section li a:active, #we_can_help_if li a:hover, #about_us section li a:hover {
   text-decoration: underline;
 }
 
@@ -459,6 +459,13 @@ header img {
       height: 100%;
     }
   }
+}
+
+#we_can_help_if {
+  padding-bottom: 10px;
+  height: 400px;
+  overflow-y: auto;
+  background-color: white;
 }
 
 @supports (display: grid) {
