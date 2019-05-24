@@ -28,7 +28,7 @@
   }
 }
 
-footer p a, #what_we_do > div article, body > section:nth-child(1) > nav a, a.show,
+footer p a, #we_can_help_if section > div div, #we_can_help_if section > div, #what_we_do > div article, body > section:nth-child(1) > nav a, a.show,
 a.hide {
   transition: 0.5s;
   transition-timing-function: ease-out;
@@ -462,10 +462,41 @@ header img {
 }
 
 #we_can_help_if {
-  padding-bottom: 10px;
+  background-color: white;
+}
+#we_can_help_if section {
   height: 400px;
   overflow-y: auto;
-  background-color: white;
+}
+#we_can_help_if section ul li {
+  padding: 20px;
+  margin-right: 10px;
+}
+#we_can_help_if section ul li:nth-of-type(2n+1) {
+  background-color: #ededed;
+}
+#we_can_help_if section > div {
+  display: flex;
+  justify-content: center;
+  position: sticky;
+  bottom: 0;
+  width: 100%;
+}
+#we_can_help_if section > div div {
+  background-color: #555;
+  box-shadow: 0px 0px 7px 1px rgba(0, 0, 0, 0.75);
+  border-radius: 5px 5px 0 0;
+}
+#we_can_help_if section > div div p {
+  margin: 0;
+  font-size: 1.4em;
+  color: #fff;
+}
+#we_can_help_if section.not-scrolled > div {
+  bottom: -35px;
+}
+#we_can_help_if section.not-scrolled > div div {
+  opacity: 0;
 }
 
 @supports (display: grid) {

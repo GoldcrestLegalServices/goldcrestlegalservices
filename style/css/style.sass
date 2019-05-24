@@ -398,9 +398,35 @@ header
 #we_can_help_if
     @extend %section_sizing
     @extend %text-artical
-    padding-bottom: 10px
-    height: 400px
-    overflow-y: auto
+    section
+        height: 400px
+        overflow-y: auto
+        ul li
+            padding: 20px
+            margin-right: 10px
+            &:nth-of-type(2n+1)
+                background-color: $light-grey-background
+        > div
+            @extend %nice_transition
+            display: flex
+            justify-content: center
+            position: sticky
+            bottom: 0
+            width: 100%
+            div
+                background-color: #555
+                box-shadow: 0px 0px 7px 1px rgba(0,0,0,0.75)
+                border-radius: 5px 5px 0  0
+                @extend %nice_transition
+                p
+                    margin: 0
+                    font-size: 1.4em
+                    color: #fff
+        &.not-scrolled > div
+            bottom: -35px
+            div
+                opacity: 0
+            
     background-color: white
 
 @supports (display: grid)
