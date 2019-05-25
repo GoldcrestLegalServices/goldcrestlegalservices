@@ -63,7 +63,7 @@ function ShowIfMobile(id) {
 function ScrollPosit() {
     var element = document.getElementById("scroll");
     var position = element.scrollTop;
-    var down = position > 300;
+    var down = position > 130;
     if (down) {
         element.classList.add('not-scrolled');
     } else {
