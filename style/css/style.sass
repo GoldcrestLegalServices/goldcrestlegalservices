@@ -398,14 +398,24 @@ header
 #we_can_help_if
     @extend %section_sizing
     @extend %text-artical
-    section
+    > section
         height: 400px
         overflow-y: auto
-        ul li
-            padding: 20px
-            margin-right: 10px
-            &:nth-of-type(2n+1)
-                background-color: $light-grey-background
+        > section
+            display: flex
+            align-items: flex-start
+            img
+                width: 50px
+                padding: 10px
+                flex-shrink: 0
+            p
+                padding: 20px
+                margin-right: 10px
+                margin-top: 0
+            &:nth-of-type(2n+1) p
+                background-color: #f1f1f1
+            &:first-child
+                padding-top: 10px
         > div
             @extend %nice_transition
             display: flex
@@ -414,19 +424,23 @@ header
             bottom: 0
             width: 100%
             div
-                background-color: #555
-                box-shadow: 0px 0px 7px 1px rgba(0,0,0,0.75)
-                border-radius: 5px 5px 0  0
+                background-color: #bbb
+                border-top: 4px solid #555
+                border-radius: 4px 4px 0  0
                 @extend %nice_transition
                 p
                     margin: 0
-                    font-size: 1.4em
-                    color: #fff
+                    padding: 10px
+                        top: 8px
+                    font-size: 1.2em
+                    text-shadow: 1px 1px 0px #fff
+                    font-weight: bold
         &.not-scrolled > div
             bottom: -35px
             div
                 opacity: 0
-            
+        > p
+            margin-bottom: -35px
     background-color: white
 
 @supports (display: grid)
