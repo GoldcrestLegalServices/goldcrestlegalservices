@@ -1,9 +1,5 @@
 function Display(show) {
-    if (show) {
-        return 'block';
-    } else {
-        return 'none';
-    }
+    return show ? 'block' : 'none'
 }
 
 
