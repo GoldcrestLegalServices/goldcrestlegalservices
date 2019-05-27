@@ -476,6 +476,10 @@ header img {
   width: 50px;
   padding: 10px;
   flex-shrink: 0;
+  transition: 0.5s;
+}
+#we_can_help_if > section > section:hover img {
+  transform: rotateZ(24deg) scale(1.1);
 }
 #we_can_help_if > section > section p {
   width: 100%;
