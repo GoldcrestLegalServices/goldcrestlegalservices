@@ -408,7 +408,7 @@ header
                 width: 50px
                 padding: 10px
                 flex-shrink: 0
-                transition: .5s
+                @extend %nice_transition
             &:hover img
                 transform: rotateZ(24deg) scale(1.1)
             p
@@ -416,7 +416,7 @@ header
                 padding: 20px
                 margin-right: 10px
                 margin-top: 0
-            &:nth-of-type(2n+1) p
+            &:nth-of-type(odd) p
                 background-color: #f1f1f1
             &:first-child
                 padding-top: 10px

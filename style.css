@@ -28,7 +28,7 @@
   }
 }
 
-footer p a, #we_can_help_if > section > div div, #we_can_help_if > section > div, #what_we_do > div article, body > section:nth-child(1) > nav a, a.show,
+footer p a, #we_can_help_if > section > div div, #we_can_help_if > section > div, #we_can_help_if > section > section img, #what_we_do > div article, body > section:nth-child(1) > nav a, a.show,
 a.hide {
   transition: 0.5s;
   transition-timing-function: ease-out;
@@ -476,7 +476,6 @@ header img {
   width: 50px;
   padding: 10px;
   flex-shrink: 0;
-  transition: 0.5s;
 }
 #we_can_help_if > section > section:hover img {
   transform: rotateZ(24deg) scale(1.1);
@@ -487,7 +486,7 @@ header img {
   margin-right: 10px;
   margin-top: 0;
 }
-#we_can_help_if > section > section:nth-of-type(2n+1) p {
+#we_can_help_if > section > section:nth-of-type(odd) p {
   background-color: #f1f1f1;
 }
 #we_can_help_if > section > section:first-child {
