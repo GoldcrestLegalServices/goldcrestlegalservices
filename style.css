@@ -495,11 +495,13 @@ header img {
   position: sticky;
   bottom: 0;
   width: 100%;
+  pointer-events: none;
 }
 #we_can_help_if > section > div div {
   background-color: #bbb;
   border-top: 4px solid #555;
   border-radius: 4px 4px 0 0;
+  pointer-events: auto;
 }
 #we_can_help_if > section > div div p {
   margin: 0;
