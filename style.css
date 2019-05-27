@@ -486,6 +486,9 @@ header img {
   margin-right: 10px;
   margin-top: 0;
 }
+#we_can_help_if > section > section p strong {
+  font-weight: bold;
+}
 #we_can_help_if > section > section:nth-of-type(odd) p {
   background-color: #f1f1f1;
 }
