@@ -485,10 +485,6 @@ header img {
   padding: 20px;
   margin: 0;
   margin-right: 10px;
-  border-left: solid 3px #ccc;
-  border-bottom: solid 2px #ccc;
-  border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px;
 }
 #we_can_help_if > section > section p strong {
   font-weight: bold;
