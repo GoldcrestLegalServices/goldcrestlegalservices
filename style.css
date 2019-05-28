@@ -515,8 +515,8 @@ header img {
   padding: 10px;
   padding-top: 8px;
   font-size: 1.2em;
-  text-shadow: 1px 1px 0px #fff;
   font-weight: bold;
+  text-shadow: 1px 1px 0px #fff;
 }
 #we_can_help_if > section.not-scrolled > div {
   bottom: -35px;
@@ -524,7 +524,7 @@ header img {
 #we_can_help_if > section.not-scrolled > div div {
   opacity: 0;
 }
-#we_can_help_if > section > p {
+#we_can_help_if > section > p:last-of-type {
   margin-bottom: -35px;
 }
 

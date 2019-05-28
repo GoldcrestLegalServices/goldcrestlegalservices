@@ -395,6 +395,8 @@ header
                     position: center
                 +size(100%)
 
+
+$heigth-of-scroll-for-more: 35px
 #we_can_help_if
     @extend %section_sizing
     @extend %text-artical
@@ -415,13 +417,14 @@ header
                 width: 100%
                 padding: 20px
                 margin: 0
-                margin-right: 10px
+                    right: 10px
                 strong
                     font-weight: bold
-                border-left: solid 3px #ccc
-                border-bottom: solid 2px #ccc
-                border-top-left-radius: 10px
-                border-bottom-left-radius: 10px
+                border:
+                    left: solid 3px #ccc
+                    bottom: solid 2px #ccc
+                    top-left-radius: 10px
+                    bottom-left-radius: 10px
             &:first-child
                 padding-top: 10px
         > div
@@ -434,23 +437,25 @@ header
             pointer-events: none
             div
                 background-color: #bbb
-                border-top: 4px solid #555
-                border-radius: 4px 4px 0  0
+                border:
+                    top: 4px solid #555
+                    radius: 4px 4px 0  0
                 @extend %nice_transition
                 pointer-events: auto
                 p
                     margin: 0
                     padding: 10px
                         top: 8px
-                    font-size: 1.2em
+                    font:
+                        size: 1.2em
+                        weight: bold
                     text-shadow: 1px 1px 0px #fff
-                    font-weight: bold
         &.not-scrolled > div
-            bottom: -35px
+            bottom: $heigth-of-scroll-for-more * -1
             div
                 opacity: 0
-        > p
-            margin-bottom: -35px
+        > p:last-of-type
+            margin-bottom: $heigth-of-scroll-for-more * -1
     background-color: white
 
 @supports (display: grid)
