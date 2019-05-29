@@ -13,22 +13,22 @@
   font-display: swap;
   src: url("style/fonts/liberation-serif/LiberationSerif-Regular-webfont.woff");
 }
-#contact, #part_of, #why_choose_us, #about_us, #what_we_do, header, body > section:nth-child(1) > nav {
+#contact, #part_of, #why_choose_us, #we_can_help_if, #about_us, #what_we_do, header, body > section:nth-child(1) > nav {
   max-width: 100%;
 }
 @media (min-width: 696px) {
-  #contact, #part_of, #why_choose_us, #about_us, #what_we_do, header, body > section:nth-child(1) > nav {
+  #contact, #part_of, #why_choose_us, #we_can_help_if, #about_us, #what_we_do, header, body > section:nth-child(1) > nav {
     margin: 16px 72px;
     max-width: 1360px;
   }
 }
 @media (min-width: 1490px) {
-  #contact, #part_of, #why_choose_us, #about_us, #what_we_do, header, body > section:nth-child(1) > nav {
+  #contact, #part_of, #why_choose_us, #we_can_help_if, #about_us, #what_we_do, header, body > section:nth-child(1) > nav {
     margin: 16px auto;
   }
 }
 
-footer p a, #what_we_do > div article, body > section:nth-child(1) > nav a, a.show,
+footer p a, #we_can_help_if > section > div div, #we_can_help_if > section > div, #we_can_help_if > section > section img, #what_we_do > div article, body > section:nth-child(1) > nav a, a.show,
 a.hide {
   transition: 0.5s;
   transition-timing-function: ease-out;
@@ -56,6 +56,20 @@ body {
 
 #part_of, header {
   box-sizing: content-box;
+}
+
+#we_can_help_if p, #about_us section p, #we_can_help_if li, #about_us section li {
+  padding: 4px;
+  padding-left: 16px;
+  padding-right: 16px;
+  font-size: 18px;
+}
+#we_can_help_if p a, #about_us section p a, #we_can_help_if li a, #about_us section li a {
+  text-decoration: none;
+  color: #0404d9;
+}
+#we_can_help_if p a:active, #about_us section p a:active, #we_can_help_if p a:hover, #about_us section p a:hover, #we_can_help_if li a:active, #about_us section li a:active, #we_can_help_if li a:hover, #about_us section li a:hover {
+  text-decoration: underline;
 }
 
 a.show,
@@ -204,7 +218,7 @@ body > section h2 {
   body > section h2 {
     width: 160px;
   }
-  body > section#why_choose_us h2 {
+  body > section#why_choose_us h2, body > section#we_can_help_if h2 {
     width: 240px;
   }
 }
@@ -427,19 +441,6 @@ header img {
   margin-bottom: 0;
   padding-bottom: 10px;
 }
-#about_us section p {
-  padding: 4px;
-  padding-left: 16px;
-  padding-right: 16px;
-  font-size: 18px;
-}
-#about_us section p a {
-  text-decoration: none;
-  color: #0404d9;
-}
-#about_us section p a:active, #about_us section p a:hover {
-  text-decoration: underline;
-}
 @supports (display: grid) {
   @media (min-width: 1040px) {
     #about_us {
@@ -458,6 +459,69 @@ header img {
       height: 100%;
     }
   }
+}
+
+#we_can_help_if {
+  background-color: #fff;
+}
+#we_can_help_if > section {
+  height: 400px;
+  overflow-y: auto;
+}
+#we_can_help_if > section > section {
+  display: flex;
+  padding-bottom: 15px;
+}
+#we_can_help_if > section > section img {
+  width: 50px;
+  padding: 10px;
+  flex-shrink: 0;
+}
+#we_can_help_if > section > section:hover img {
+  transform: scale(1.1);
+}
+#we_can_help_if > section > section p {
+  width: 100%;
+  padding: 20px;
+  margin: 0;
+  margin-right: 10px;
+}
+#we_can_help_if > section > section p strong {
+  font-weight: bold;
+}
+#we_can_help_if > section > section:first-child {
+  padding-top: 10px;
+}
+#we_can_help_if > section > div {
+  display: flex;
+  justify-content: center;
+  position: sticky;
+  bottom: 0;
+  width: 100%;
+  pointer-events: none;
+}
+#we_can_help_if > section > div div {
+  background-color: #bbb;
+  border-top: 4px solid #555;
+  border-radius: 4px 4px 0 0;
+  pointer-events: auto;
+}
+#we_can_help_if > section > div div p {
+  margin: 0;
+  padding: 10px;
+  padding-top: 8px;
+  font-size: 1.2em;
+  font-weight: bold;
+  text-shadow: 1px 1px 0px #fff;
+}
+#we_can_help_if > section.not-scrolled > div {
+  bottom: -35px;
+}
+#we_can_help_if > section.not-scrolled > div div {
+  opacity: 0;
+}
+#we_can_help_if > section > p:last-of-type {
+  margin-bottom: -35px;
 }
 
 @supports (display: grid) {

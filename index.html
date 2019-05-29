@@ -22,11 +22,7 @@ gtag('js', new Date());
 gtag('config', 'UA-137023372-1');
     </script>
     <script>function Display(show) {
-    if (show) {
-        return 'block';
-    } else {
-        return 'none';
-    }
+    return show ? 'block' : 'none'
 }
 
 
@@ -81,6 +77,17 @@ function HideAll() {
 
 function ShowIfMobile(id) {
     ShowInfo(id)
+}
+
+function ScrollPosit() {
+    var element = document.getElementById("scroll");
+    var position = element.scrollTop;
+    var down = position > 130;
+    if (down) {
+        element.classList.add('not-scrolled');
+    } else {
+        element.classList.remove('not-scrolled');
+    }
 }
     </script>
   </head>
@@ -185,6 +192,116 @@ function ShowIfMobile(id) {
           Her willingness to serve also extends to charities and volunteering in the community, including telephone befriending, the home library service and bereavement awareness.&nbsp;&nbsp;
           In her spare time she enjoys walking, gardening, cooking, ornithology and music.&nbsp;&nbsp;
         </p>
+      </section>
+    </section>
+    <section id="we_can_help_if">
+      <h2>We Can Help if...</h2>
+      <section id="scroll">
+        <section><img src="private/images/svg/logo.svg">
+          <p>
+            you need to apply to become a 
+            deputy 
+            for an elderly relative who has lost the ability to manage their affairs and who didn't register a Lasting Power or an Enduring Power of Attorney.
+            Your relative may also need a 
+            Statutory Will
+          </p>
+        </section>
+        <section><img src="private/images/svg/logo.svg">
+          <p>
+            you're a parent, grandparent, godparent, aunt, uncle or someone else who has a concern that children and grandchildren are at risk if they receive or inherit too much too soon.
+            We can create a 
+            trust 
+            to hold the assets until the children are older and wiser.
+          </p>
+        </section>
+        <section><img src="private/images/svg/logo.svg">
+          <p>
+            (i) you are named as 
+            executor 
+            in a Will and are overwhelmed by the responsibility, too distressed or simply too busy to act at a time of loss or in need of urgent help with practical as well as legal matters, 
+            (ii) a named executor has died, moved away or has otherwise become incapable of acting or 
+            (iii) you have recently lost a relative or friend who died without making a Will and there is no one able or willing to administer the estate. 
+          </p>
+        </section>
+        <section><img src="private/images/svg/logo.svg">
+          <p>
+            you have a son or daughter or someone else you would like to benefit who has a 
+            disability 
+            or is in some other way vulnerable and in need of special care; or for some other reason be incapable of managing their own financial affairs.
+            In any of these situations cash, shares, property or other forms of wealth can be placed into a suitable family trust and those who manage the trust have full discretion on how the beneficiaries are helped with the funds.
+          </p>
+        </section>
+        <section><img src="private/images/svg/logo.svg">
+          <p>
+            you are a 
+            business owner 
+            who wants to ensure your business continues and your loved ones are protected should anything happen to you.
+          </p>
+        </section>
+        <section><img src="private/images/svg/logo.svg">
+          <p>
+            you are concerned that by giving away in your Will all your wealth to a spouse/partner, the money may be spent or invested unwisely, so that little or nothing will remain for your children to enjoy. 
+            We can create a Will 
+            trust 
+            to ensure capital is protected for children but without loss to a 
+            surviving spouse 
+            of any benefit during their widow(er)hood.  
+          </p>
+        </section>
+        <section><img src="private/images/svg/logo.svg">
+          <p>
+            you currently have an aged dependant – perhaps a widowed mother who would need continuing care should you die before them. 
+            We can create a 
+            trust 
+            to hold sufficient capital to continue to help them.
+            At the passing of your 
+            elderly relative 
+            the funds can then return to you or go to other family members. 
+          </p>
+        </section>
+        <section><img src="private/images/svg/logo.svg">
+          <p>
+             you are concerned about funding 
+            later life care 
+            and wish to have the most recent, ethical advice on how to best look after your interests.  
+          </p>
+        </section>
+        <section><img src="private/images/svg/logo.svg">
+          <p>
+            you have an adult son or daughter in danger of bankruptcy, has dependency issues or is in an unstable marriage or other relationship.
+            In any of these 
+            situations 
+            cash, shares, property or other forms of wealth can be placed into a suitable family 
+            trust 
+            managed by 
+            trustees 
+            with complete discretion regarding ways in which your son or daughter is helped financially whilst they receive support.
+          </p>
+        </section>
+        <section><img src="private/images/svg/logo.svg">
+          <p>
+            you would like to know more about 
+            charitable giving 
+            through your Will, and how it can benefit both you and the charities.
+            We also can also assist with more information on worthy local charities.
+          </p>
+        </section>
+        <section><img src="private/images/svg/logo.svg">
+          <p>
+            And through our business associates we can help with advice on how to maximise wealth by careful 
+            inheritance tax planning, releasing equity 
+            tied up in your home or ensuring 
+            funeral costs 
+            are taken care of and delivered by a caring and professional 
+            local funeral director
+          </p>
+        </section>
+        <p>Above are just some of the ways Goldcrest Legal Services can assist.</p>
+        <div>
+          <div>
+            <p>Scroll for more.</p>
+          </div>
+        </div>
       </section>
     </section>
     <section id="extra_photos">
@@ -325,6 +442,9 @@ function ShowIfMobile(id) {
       <p>Regestered in England at 2 Upperton Gardens, Eastbourne, East Sussex BN21 2AH. </p>
       <p>Designed by <a href="https://efunb.com/">Ethan Brierley</a></p>
     </footer>
-    <script>HideAll();</script>
+    <script>
+      HideAll();
+      setInterval(ScrollPosit, 500);
+    </script>
   </body>
 </html>
