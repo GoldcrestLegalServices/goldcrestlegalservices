@@ -60,6 +60,19 @@ $text-black: #2a2a2a
     box-sizing: content-box
     @extend %inherit-box-sizing
 
+%text-artical
+    p, li
+        padding: 4px
+            left: 16px
+            right: 16px
+        font-size: 18px
+        a
+            text-decoration: none
+            color: #0404d9
+            &:active,
+            &:hover
+                text-decoration: underline
+
 $button-border-colour: #252525
 $button-background: rgb(196, 196, 196)
 =button_fill($transparentize)
@@ -172,8 +185,10 @@ body > section
     @media(min-width: 400px)
         h2
             width: 160px
-        &#why_choose_us h2
-            width: 240px
+        &#why_choose_us,
+        &#we_can_help_if
+            h2
+                width: 240px
 
 $nav_layout_break: 1110px
 body > section:nth-child(1) > nav
@@ -364,17 +379,7 @@ header
     section
         margin-bottom: 0
         padding-bottom: 10px
-        p
-            padding: 4px
-                left: 16px
-                right: 16px
-            font-size: 18px
-            a
-                text-decoration: none
-                color: #0404d9
-                &:active,
-                &:hover
-                    text-decoration: underline
+        @extend %text-artical
     @supports (display: grid)
         @media (min-width: 1040px)
             +grid
@@ -389,6 +394,67 @@ header
                     size: cover
                     position: center
                 +size(100%)
+
+
+$heigth-of-scroll-for-more: 35px
+#we_can_help_if
+    @extend %section_sizing
+    @extend %text-artical
+    > section
+        height: 400px
+        overflow-y: auto
+        > section
+            display: flex
+            align-items: center
+            padding-bottom: 15px
+            img
+                +size(50px)
+                @extend %nice_transition
+                padding: 10px
+            &:hover img
+                transform: scale(1.1)
+            p
+                width: 100%
+                padding: 20px
+                margin: 0
+                    right: 10px
+                strong
+                    font-weight: bold
+            &:first-child
+                padding-top: 10px
+        > div
+            display: none
+            @supports (position: sticky)
+                @extend %nice_transition
+                display: flex
+                justify-content: center
+                position: sticky
+                bottom: 0
+                width: 100%
+                pointer-events: none
+                div
+                    background-color: #bbb
+                    border:
+                        top: 4px solid #555
+                        radius: 4px 4px 0  0
+                    @extend %nice_transition
+                    pointer-events: auto
+                    p
+                        margin: 0
+                        padding: 10px
+                            top: 8px
+                        font:
+                            size: 1.2em
+                            weight: bold
+                        text-shadow: 1px 1px 0px #fff
+        &.not-scrolled > div
+            bottom: $heigth-of-scroll-for-more * -1
+            div
+                opacity: 0
+        @supports (position: sticky)
+            > p:last-of-type
+                margin-bottom: $heigth-of-scroll-for-more * -1
+    background-color: #fff
 
 @supports (display: grid)
     #extra_photos
@@ -514,8 +580,11 @@ header
                         height: 2px
                         background-color: #aaa
                         margin-top: 4px
+            &.hours span
+                display: block
+                font-size: 0.7em
         @supports (display: grid)
-            @media (min-width: 820px)
+            @media (min-width: 1000px)
                 +grid
                     template:
                         columns: repeat(2, 1fr)
@@ -531,7 +600,7 @@ header
                         margin:
                             top: 8px
                             bottom: 8px
-            @media (min-width: 1180px)
+            @media (min-width: 1290px)
                 grid-template-columns: repeat(3, 1fr)
                 margin-top: 0
                 &::after

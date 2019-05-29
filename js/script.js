@@ -1,9 +1,5 @@
 function Display(show) {
-    if (show) {
-        return 'block';
-    } else {
-        return 'none';
-    }
+    return show ? 'block' : 'none'
 }
 
 
@@ -58,4 +54,15 @@ function HideAll() {
 
 function ShowIfMobile(id) {
     ShowInfo(id)
+}
+
+function ScrollPosit() {
+    var element = document.getElementById("scroll");
+    var position = element.scrollTop;
+    var down = position > 130;
+    if (down) {
+        element.classList.add('not-scrolled');
+    } else {
+        element.classList.remove('not-scrolled');
+    }
 }
