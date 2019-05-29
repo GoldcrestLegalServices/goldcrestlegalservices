@@ -424,34 +424,37 @@ $heigth-of-scroll-for-more: 35px
             &:first-child
                 padding-top: 10px
         > div
-            @extend %nice_transition
-            display: flex
-            justify-content: center
-            position: sticky
-            bottom: 0
-            width: 100%
-            pointer-events: none
-            div
-                background-color: #bbb
-                border:
-                    top: 4px solid #555
-                    radius: 4px 4px 0  0
+            display: none
+            @supports (position: sticky)
                 @extend %nice_transition
-                pointer-events: auto
-                p
-                    margin: 0
-                    padding: 10px
-                        top: 8px
-                    font:
-                        size: 1.2em
-                        weight: bold
-                    text-shadow: 1px 1px 0px #fff
+                display: flex
+                justify-content: center
+                position: sticky
+                bottom: 0
+                width: 100%
+                pointer-events: none
+                div
+                    background-color: #bbb
+                    border:
+                        top: 4px solid #555
+                        radius: 4px 4px 0  0
+                    @extend %nice_transition
+                    pointer-events: auto
+                    p
+                        margin: 0
+                        padding: 10px
+                            top: 8px
+                        font:
+                            size: 1.2em
+                            weight: bold
+                        text-shadow: 1px 1px 0px #fff
         &.not-scrolled > div
             bottom: $heigth-of-scroll-for-more * -1
             div
                 opacity: 0
-        > p:last-of-type
-            margin-bottom: $heigth-of-scroll-for-more * -1
+        @supports (position: sticky)
+            > p:last-of-type
+                margin-bottom: $heigth-of-scroll-for-more * -1
     background-color: #fff
 
 @supports (display: grid)

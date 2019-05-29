@@ -495,26 +495,31 @@ header img {
   padding-top: 10px;
 }
 #we_can_help_if > section > div {
-  display: flex;
-  justify-content: center;
-  position: sticky;
-  bottom: 0;
-  width: 100%;
-  pointer-events: none;
+  display: none;
 }
-#we_can_help_if > section > div div {
-  background-color: #bbb;
-  border-top: 4px solid #555;
-  border-radius: 4px 4px 0 0;
-  pointer-events: auto;
-}
-#we_can_help_if > section > div div p {
-  margin: 0;
-  padding: 10px;
-  padding-top: 8px;
-  font-size: 1.2em;
-  font-weight: bold;
-  text-shadow: 1px 1px 0px #fff;
+@supports (position: sticky) {
+  #we_can_help_if > section > div {
+    display: flex;
+    justify-content: center;
+    position: sticky;
+    bottom: 0;
+    width: 100%;
+    pointer-events: none;
+  }
+  #we_can_help_if > section > div div {
+    background-color: #bbb;
+    border-top: 4px solid #555;
+    border-radius: 4px 4px 0 0;
+    pointer-events: auto;
+  }
+  #we_can_help_if > section > div div p {
+    margin: 0;
+    padding: 10px;
+    padding-top: 8px;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-shadow: 1px 1px 0px #fff;
+  }
 }
 #we_can_help_if > section.not-scrolled > div {
   bottom: -35px;
@@ -522,8 +527,10 @@ header img {
 #we_can_help_if > section.not-scrolled > div div {
   opacity: 0;
 }
-#we_can_help_if > section > p:last-of-type {
-  margin-bottom: -35px;
+@supports (position: sticky) {
+  #we_can_help_if > section > p:last-of-type {
+    margin-bottom: -35px;
+  }
 }
 
 @supports (display: grid) {
