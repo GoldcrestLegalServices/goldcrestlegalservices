@@ -470,6 +470,7 @@ header img {
 }
 #we_can_help_if > section > section {
   display: flex;
+  align-items: center;
   padding-bottom: 15px;
 }
 #we_can_help_if > section > section img {
