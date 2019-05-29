@@ -231,7 +231,7 @@ body > section:nth-child(1) > nav {
   padding-bottom: 8px;
   background-color: #ededed;
 }
-@media (min-width: 1110px) {
+@media (min-width: 1225px) {
   body > section:nth-child(1) > nav {
     display: flex;
     align-items: center;
@@ -268,7 +268,7 @@ body > section:nth-child(1) > nav p {
     font-size: 20px;
   }
 }
-@media (min-width: 1110px) {
+@media (min-width: 1225px) {
   body > section:nth-child(1) > nav p {
     padding: 8px;
     text-align: right;
