@@ -634,11 +634,11 @@ header img {
 }
 @supports (color: black) {
   #part_of figure img {
-    max-height: 120px;
+    max-height: 80px;
     max-width: 90%;
   }
   #part_of figure img.smaller {
-    max-height: 100px;
+    max-height: 80px;
   }
 }
 #part_of > p {
