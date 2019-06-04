@@ -711,18 +711,19 @@ aside
     width: 100%
     bottom: 0
     z-index: 3
-    display: flex
-    justify-content: space-between
+    text-align: center
     p
         margin: 0
     nav
+        margin: 7px
         a
             @extend %nice_transition
             text-decoration: none
             box-shadow: 0px 0px 0px 1px rgba(255,255,255,1)
             border-radius: 5px
-            margin: 0 5px
+            margin: 2px 5px
             padding: 2px 4px
+            display: inline-block
             &:hover
                 border-width: 3px
                 box-shadow: 0px 0px 0px 2px rgba(255,255,255,1)
@@ -737,6 +738,16 @@ aside
         transform: scale(0.97)
         transform-origin: bottom center
         pointer-events: none
+    @media(min-width: 750px)
+        display: flex
+        justify-content: space-between
+        align-items: center
+        nav
+            margin: 0
+            a
+                margin:
+                    top: 0
+                    bottom: 0
 
 section.colour-block
     &.top
