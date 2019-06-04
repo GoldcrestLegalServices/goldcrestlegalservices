@@ -512,8 +512,7 @@ $heigth-of-scroll-for-more: 35px
         bottom: 5.6px
     figure
         display: flex
-        justify-content: flex-start
-        align-items: center
+        justify-content: center
         flex-direction: column
         margin:
             top: 28px
@@ -523,17 +522,14 @@ $heigth-of-scroll-for-more: 35px
         @media (min-width: 600px)
             flex-direction: row
         img
-            width: 90%
-            max-width: 600px
             display: block
+            max-width: 600px
             margin:
+                bottom: 50px
                 left: 30px
                 right: 30px
-                bottom: 50px
             +not_for_ie_hack
-                max:
-                    height: 80px
-                    width: 90%
+                max-height: 80px
                 &.smaller
                     max-height: 80px
     > p
