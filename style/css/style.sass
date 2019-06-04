@@ -511,19 +511,28 @@ $heigth-of-scroll-for-more: 35px
     padding:
         top: 5.6px
         bottom: 5.6px
-    img
-        width: 90%
-        max-width: 600px
-        display: block
+    figure
+        display: flex
+        justify-content: center
+        flex-direction: column
         margin:
             top: 28px
             bottom: 0
             left: auto
             right: auto
-        +not_for_ie_hack
-            max:
-                height: 120px
-                width: 90%
+        @media (min-width: 600px)
+            flex-direction: row
+        img
+            display: block
+            max-width: 600px
+            margin:
+                bottom: 50px
+                left: 30px
+                right: 30px
+            +not_for_ie_hack
+                max-height: 80px
+                &.smaller
+                    max-height: 80px
     > p
         width: 90%
         margin: 5%
