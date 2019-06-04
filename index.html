@@ -89,6 +89,22 @@ function ScrollPosit() {
         element.classList.remove('not-scrolled');
     }
 }
+
+function SetupPolicy() {
+    document.getElementById("policy").style.position = "fixed";
+}
+
+function PolicyHideOnScroll() {
+    var element = document.getElementById("policy");
+    var position = window.pageYOffset;
+    if (position > 200 || element.classList.contains('closed')) {
+        element.classList.add('hide');
+    } else {
+        element.classList.remove('hide');
+    }
+}
+
+function PolicyHide() { document.getElementById("policy").classList.add('closed') }
     </script>
   </head>
   <body>
@@ -442,13 +458,15 @@ function ScrollPosit() {
       <p>Regestered in England at 2 Upperton Gardens, Eastbourne, East Sussex BN21 2AH. </p>
       <p>Designed by <a href="https://efunb.com/">Ethan Brierley</a></p>
     </footer>
-    <aside>
+    <aside id="policy">
       <p>This site uses cookies to provide the best experience possible.</p>
-      <nav><a href="#">Cookie policy</a><a href="#">Privacy policy</a><a href="#">&times;</a></nav>
+      <nav><a href="#">Cookie policy</a><a href="#">Privacy policy</a><a href="javascript:PolicyHide();">&times;</a></nav>
     </aside>
     <script>
       HideAll();
+      SetupPolicy();
       setInterval(ScrollPosit, 500);
+      setInterval(PolicyHideOnScroll, 500);
     </script>
   </body>
 </html>

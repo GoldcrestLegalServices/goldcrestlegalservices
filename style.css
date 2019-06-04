@@ -28,7 +28,7 @@
   }
 }
 
-footer p a, #we_can_help_if > section > div div, #we_can_help_if > section > div, #we_can_help_if > section > section img, #what_we_do > div article, body > section:nth-of-type(1) > nav a, aside nav a, a.show,
+aside nav a, aside, footer p a, #we_can_help_if > section > div div, #we_can_help_if > section > div, #we_can_help_if > section > section img, #what_we_do > div article, body > section:nth-of-type(1) > nav a, a.show,
 a.hide {
   transition: 0.5s;
   transition-timing-function: ease-out;
@@ -221,38 +221,6 @@ body > section h2 {
   body > section#why_choose_us h2, body > section#we_can_help_if h2 {
     width: 240px;
   }
-}
-
-aside {
-  background-color: #420808;
-  padding: 8px 4px;
-  position: sticky;
-  width: 100%;
-  bottom: 0;
-  z-index: 3;
-  display: flex;
-  justify-content: space-between;
-}
-aside p {
-  margin: 0;
-}
-aside nav a {
-  text-decoration: none;
-  box-shadow: 0px 0px 0px 1px white;
-  border-radius: 5px;
-  margin: 0 5px;
-  padding: 2px 4px;
-}
-aside nav a:hover {
-  border-width: 3px;
-  box-shadow: 0px 0px 0px 2px white;
-}
-aside nav a:last-child {
-  padding: 0 4px;
-  margin-left: 10px;
-}
-aside p, aside nav a {
-  color: #fff;
 }
 
 body > section:nth-of-type(1) > nav {
@@ -872,6 +840,45 @@ footer nav a:hover svg, footer nav a:active svg {
   footer nav a:hover svg, footer nav a:active svg {
     fill: #000;
   }
+}
+
+aside {
+  background-color: #420808;
+  padding: 8px 4px;
+  position: sticky;
+  width: 100%;
+  bottom: 0;
+  z-index: 3;
+  display: flex;
+  justify-content: space-between;
+}
+aside p {
+  margin: 0;
+}
+aside nav a {
+  text-decoration: none;
+  box-shadow: 0px 0px 0px 1px white;
+  border-radius: 5px;
+  margin: 0 5px;
+  padding: 2px 4px;
+}
+aside nav a:hover {
+  border-width: 3px;
+  box-shadow: 0px 0px 0px 2px white;
+}
+aside nav a:last-child {
+  padding: 0 4px;
+  margin-left: 10px;
+  border-radius: 30px;
+}
+aside p, aside nav a {
+  color: #fff;
+}
+aside.hide {
+  opacity: 0;
+  transform: scale(0.97);
+  transform-origin: bottom center;
+  pointer-events: none;
 }
 
 section.colour-block.top {
