@@ -1,5 +1,5 @@
 start cmd /k sass style/css:
 timeout 5
-start cmd /k pug index.pug -P
+start cmd /k pug index.pug privacy-policy.pug -P
 timeout 5
 start cmd /k image-watcher -c

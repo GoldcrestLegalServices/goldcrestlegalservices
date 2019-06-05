@@ -13,17 +13,17 @@
   font-display: swap;
   src: url("style/fonts/liberation-serif/LiberationSerif-Regular-webfont.woff");
 }
-#contact, #part_of, #why_choose_us, #we_can_help_if, #about_us, #what_we_do, header, body > section:nth-of-type(1) > nav {
+#privacy-policy, #contact, #part_of, #why_choose_us, #we_can_help_if, #about_us, #what_we_do, header, body > section:nth-of-type(1) > nav {
   max-width: 100%;
 }
 @media (min-width: 696px) {
-  #contact, #part_of, #why_choose_us, #we_can_help_if, #about_us, #what_we_do, header, body > section:nth-of-type(1) > nav {
+  #privacy-policy, #contact, #part_of, #why_choose_us, #we_can_help_if, #about_us, #what_we_do, header, body > section:nth-of-type(1) > nav {
     margin: 16px 72px;
     max-width: 1360px;
   }
 }
 @media (min-width: 1490px) {
-  #contact, #part_of, #why_choose_us, #we_can_help_if, #about_us, #what_we_do, header, body > section:nth-of-type(1) > nav {
+  #privacy-policy, #contact, #part_of, #why_choose_us, #we_can_help_if, #about_us, #what_we_do, header, body > section:nth-of-type(1) > nav {
     margin: 16px auto;
   }
 }
@@ -58,17 +58,17 @@ body {
   box-sizing: content-box;
 }
 
-#we_can_help_if p, #about_us section p, #we_can_help_if li, #about_us section li {
+#privacy-policy p, #we_can_help_if p, #about_us section p, #privacy-policy li, #we_can_help_if li, #about_us section li {
   padding: 4px;
   padding-left: 16px;
   padding-right: 16px;
   font-size: 18px;
 }
-#we_can_help_if p a, #about_us section p a, #we_can_help_if li a, #about_us section li a {
+#privacy-policy p a, #we_can_help_if p a, #about_us section p a, #privacy-policy li a, #we_can_help_if li a, #about_us section li a {
   text-decoration: none;
   color: #0404d9;
 }
-#we_can_help_if p a:active, #about_us section p a:active, #we_can_help_if p a:hover, #about_us section p a:hover, #we_can_help_if li a:active, #about_us section li a:active, #we_can_help_if li a:hover, #about_us section li a:hover {
+#privacy-policy p a:active, #we_can_help_if p a:active, #about_us section p a:active, #privacy-policy p a:hover, #we_can_help_if p a:hover, #about_us section p a:hover, #privacy-policy li a:active, #we_can_help_if li a:active, #about_us section li a:active, #privacy-policy li a:hover, #we_can_help_if li a:hover, #about_us section li a:hover {
   text-decoration: underline;
 }
 
@@ -753,6 +753,15 @@ header img {
       grid-column: 3;
     }
   }
+}
+
+#privacy-policy h2:first-child {
+  width: 100%;
+}
+#privacy-policy h3 {
+  font-size: 1.5em;
+  text-align: center;
+  margin: 15px;
 }
 
 footer {
