@@ -1,0 +1,70 @@
+doctype html
+html(lang="en")
+  head
+    - var link_to_ipw = "javascript:ShowInfoInView('show_hide_5');"
+    include ./head_share.pug
+  body
+    section.colour-block.top
+      nav
+        nav
+          //- a(href='#home') Home
+          a(href='#what_we_do') What We Do
+          a(href='#about_us') About Us
+          a(href='#we_can_help_if') How We Can Help
+          a(href='#why_choose_us') Why Choose Us
+          a(href='#contact') Contact
+        p Book your free telephone consultation - 01323 332543
+      header#home
+        div
+          img(
+            src='private/images/svg/sketch_min.svg',
+            alt='Goldcrest Legal Services Ltd logo, Serving with integrity, Eastbourne & beyond'
+          )
+        div
+    block content
+    section.colour-block.foot
+      section#contact
+        h2 Contact Us
+        div
+          section.hours
+            p Hours: 9.00am to 6.00pm Monday to Friday
+              span Calls are monitored outside office hours for emergencies.
+          section.tel
+            p Tel: 01323 332543
+          section.email
+            p Email: mb@goldcrestlegal.co.uk
+          section.addr
+            div
+              p Mrs Marina Brierley
+              p Director and Legal Consultant
+              p Goldcrest Legal Services Ltd
+              p 44 Willingdon Park Drive
+              p Eastbourne
+              p East Sussex
+              p BN22 0BT
+    footer
+      nav
+        a(href="https://twitter.com/LtdGoldcrest")
+          include ./private/images/svg/social_icons/twitter.svg
+          p Twitter
+        a(href="https://www.facebook.com/Goldcrest-Legal-Services-Ltd-292761648282213/")
+          include ./private/images/svg/social_icons/facebook.svg
+          p Facebook
+        a(href="https://www.instagram.com/goldcrestlegal/")
+          include ./private/images/svg/social_icons/instagram.svg
+          p Instagram
+      p Regestered in England at 2 Upperton Gardens, Eastbourne, East Sussex BN21 2AH. 
+      p
+        | Designed by 
+        a(href='https://efunb.com/') Ethan Brierley
+    aside#policy
+      p This site uses cookies to provide the best experience possible.
+      nav
+          a(href='#') Cookie policy
+          a(href='#') Privacy policy
+          a(href='javascript:PolicyHide();') &times;
+    script.
+      HideAll();
+      SetupPolicy();
+      setInterval(ScrollPosit, 500);
+      setInterval(PolicyHideOnScroll, 500);
