@@ -71,6 +71,10 @@ body {
 #privacy-policy p a:active, #we_can_help_if p a:active, #about_us section p a:active, #privacy-policy p a:hover, #we_can_help_if p a:hover, #about_us section p a:hover, #privacy-policy li a:active, #we_can_help_if li a:active, #about_us section li a:active, #privacy-policy li a:hover, #we_can_help_if li a:hover, #about_us section li a:hover {
   text-decoration: underline;
 }
+#privacy-policy li > p, #we_can_help_if li > p, #about_us section li > p {
+  padding-left: 0;
+  padding-right: 0;
+}
 
 a.show,
 a.hide {
