@@ -13,17 +13,20 @@
   font-display: swap;
   src: url("style/fonts/liberation-serif/LiberationSerif-Regular-webfont.woff");
 }
-#privacy-policy, #contact, #part_of, #why_choose_us, #we_can_help_if, #about_us, #what_we_do, header, body > section:nth-of-type(1) > nav {
+#privacy-policy,
+#cookies-policy, #contact, #part_of, #why_choose_us, #we_can_help_if, #about_us, #what_we_do, header, body > section:nth-of-type(1) > nav {
   max-width: 100%;
 }
 @media (min-width: 696px) {
-  #privacy-policy, #contact, #part_of, #why_choose_us, #we_can_help_if, #about_us, #what_we_do, header, body > section:nth-of-type(1) > nav {
+  #privacy-policy,
+#cookies-policy, #contact, #part_of, #why_choose_us, #we_can_help_if, #about_us, #what_we_do, header, body > section:nth-of-type(1) > nav {
     margin: 16px 72px;
     max-width: 1360px;
   }
 }
 @media (min-width: 1490px) {
-  #privacy-policy, #contact, #part_of, #why_choose_us, #we_can_help_if, #about_us, #what_we_do, header, body > section:nth-of-type(1) > nav {
+  #privacy-policy,
+#cookies-policy, #contact, #part_of, #why_choose_us, #we_can_help_if, #about_us, #what_we_do, header, body > section:nth-of-type(1) > nav {
     margin: 16px auto;
   }
 }
@@ -58,20 +61,29 @@ body {
   box-sizing: content-box;
 }
 
-#privacy-policy p, #we_can_help_if p, #about_us section p, #privacy-policy li, #we_can_help_if li, #about_us section li {
+#privacy-policy p,
+#cookies-policy p, #we_can_help_if p, #about_us section p, #privacy-policy li,
+#cookies-policy li, #we_can_help_if li, #about_us section li {
   padding: 4px;
   padding-left: 16px;
   padding-right: 16px;
   font-size: 18px;
 }
-#privacy-policy p a, #we_can_help_if p a, #about_us section p a, #privacy-policy li a, #we_can_help_if li a, #about_us section li a {
+#privacy-policy p a,
+#cookies-policy p a, #we_can_help_if p a, #about_us section p a, #privacy-policy li a,
+#cookies-policy li a, #we_can_help_if li a, #about_us section li a {
   text-decoration: none;
   color: #0404d9;
 }
-#privacy-policy p a:active, #we_can_help_if p a:active, #about_us section p a:active, #privacy-policy p a:hover, #we_can_help_if p a:hover, #about_us section p a:hover, #privacy-policy li a:active, #we_can_help_if li a:active, #about_us section li a:active, #privacy-policy li a:hover, #we_can_help_if li a:hover, #about_us section li a:hover {
+#privacy-policy p a:active,
+#cookies-policy p a:active, #we_can_help_if p a:active, #about_us section p a:active, #privacy-policy p a:hover,
+#cookies-policy p a:hover, #we_can_help_if p a:hover, #about_us section p a:hover, #privacy-policy li a:active,
+#cookies-policy li a:active, #we_can_help_if li a:active, #about_us section li a:active, #privacy-policy li a:hover,
+#cookies-policy li a:hover, #we_can_help_if li a:hover, #about_us section li a:hover {
   text-decoration: underline;
 }
-#privacy-policy li > p, #we_can_help_if li > p, #about_us section li > p {
+#privacy-policy li > p,
+#cookies-policy li > p, #we_can_help_if li > p, #about_us section li > p {
   padding-left: 0;
   padding-right: 0;
 }
@@ -759,18 +771,23 @@ header img {
   }
 }
 
-#privacy-policy {
+#privacy-policy,
+#cookies-policy {
   background-color: white;
 }
-#privacy-policy h2:first-child {
+#privacy-policy h2:first-child,
+#cookies-policy h2:first-child {
   width: 210px;
 }
-#privacy-policy h3 {
+#privacy-policy h3,
+#cookies-policy h3 {
   padding-left: 17px;
   font-size: 1.5em;
 }
-#privacy-policy h4 {
-  font-size: 1.5em;
+#privacy-policy h4,
+#cookies-policy h4 {
+  font-size: 1.2em;
+  font-style: italic;
   text-align: center;
   margin: 15px;
 }
