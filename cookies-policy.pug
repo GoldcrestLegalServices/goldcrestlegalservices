@@ -1,0 +1,32 @@
+extends layout.pug
+
+block content
+  section#cookies-policy
+    h2 Cookies Policy
+    h4 Goldcrest Legal Services Ltd is fully committed to the security and integrity of all data held. 
+    p Last updated: 5th June 2019
+    p
+      | Goldcrest Legal Services ("us", "we", or "our") uses cookies on 
+      a(href="index.html") www.goldcrestlegal.co.uk 
+      | (the "Service"). By using the Service, you consent to the use of cookies.
+    p Our Cookies Policy explains what cookies are, how cookies are used, how third-parties we may partner with may use cookies on the Service, your choices regarding cookies and further information about cookies.
+    h3 What are cookies
+    p Cookies are small pieces of text sent to your web browser by a website you visit. A cookie file is stored in your web browser and allows the Service or a third-party to recognize you and make your next visit easier and the Service more useful to you.
+    p Cookies can be "persistent" or "session" cookies.
+    h3 How Goldcrest Legal Services Ltd uses cookies
+    p When you use and access the Service, we may place a number of cookies files in your web browser.
+    p Cookies may be used for the following purposes: to enable certain functions of the Service, to provide analytics, to store your preferences, to enable advertisement delivery, including behavioral advertising.
+    p We may use both session and persistent cookies on the Service and we use different types of cookies to run the Service:
+    ul
+      li Essential cookies. We may use essential cookies to authenticate users and prevent fraudulent use of user accounts
+    h3 Third-party cookies
+    p In addition to our own cookies, in future we may also use various third-parties cookies to report usage statistics of the Service, deliver advertisements on and through the Service, and so on.
+    h3 What are your choices regarding cookies
+    p If you'd like to delete cookies or instruct your web browser to delete or refuse cookies, please visit the help pages of your web browser.
+    p Please note, however, that if you delete cookies or refuse to accept them, you might not be able to use all of the features we offer, you may not be able to store your preferences, and some of our pages might not display properly.
+
+
+block script
+  script.
+    SetupPolicy();
+    setInterval(PolicyHideOnScroll, 500);

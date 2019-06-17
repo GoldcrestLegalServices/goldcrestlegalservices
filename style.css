@@ -13,22 +13,25 @@
   font-display: swap;
   src: url("style/fonts/liberation-serif/LiberationSerif-Regular-webfont.woff");
 }
-#contact, #part_of, #why_choose_us, #we_can_help_if, #about_us, #what_we_do, header, body > section:nth-child(1) > nav {
+#privacy-policy,
+#cookies-policy, #contact, #part_of, #why_choose_us, #we_can_help_if, #about_us, #what_we_do, header, body > section:nth-of-type(1) > nav {
   max-width: 100%;
 }
 @media (min-width: 696px) {
-  #contact, #part_of, #why_choose_us, #we_can_help_if, #about_us, #what_we_do, header, body > section:nth-child(1) > nav {
+  #privacy-policy,
+#cookies-policy, #contact, #part_of, #why_choose_us, #we_can_help_if, #about_us, #what_we_do, header, body > section:nth-of-type(1) > nav {
     margin: 16px 72px;
     max-width: 1360px;
   }
 }
 @media (min-width: 1490px) {
-  #contact, #part_of, #why_choose_us, #we_can_help_if, #about_us, #what_we_do, header, body > section:nth-child(1) > nav {
+  #privacy-policy,
+#cookies-policy, #contact, #part_of, #why_choose_us, #we_can_help_if, #about_us, #what_we_do, header, body > section:nth-of-type(1) > nav {
     margin: 16px auto;
   }
 }
 
-footer p a, #we_can_help_if > section > div div, #we_can_help_if > section > div, #we_can_help_if > section > section img, #what_we_do > div article, body > section:nth-child(1) > nav a, a.show,
+aside nav a, aside, footer p a, #we_can_help_if > section > div div, #we_can_help_if > section > div, #we_can_help_if > section > section img, #what_we_do > div article, body > section:nth-of-type(1) > nav a, a.show,
 a.hide {
   transition: 0.5s;
   transition-timing-function: ease-out;
@@ -58,18 +61,31 @@ body {
   box-sizing: content-box;
 }
 
-#we_can_help_if p, #about_us section p, #we_can_help_if li, #about_us section li {
+#privacy-policy p,
+#cookies-policy p, #we_can_help_if p, #about_us section p, #privacy-policy li,
+#cookies-policy li, #we_can_help_if li, #about_us section li {
   padding: 4px;
   padding-left: 16px;
   padding-right: 16px;
   font-size: 18px;
 }
-#we_can_help_if p a, #about_us section p a, #we_can_help_if li a, #about_us section li a {
+#privacy-policy p a,
+#cookies-policy p a, #we_can_help_if p a, #about_us section p a, #privacy-policy li a,
+#cookies-policy li a, #we_can_help_if li a, #about_us section li a {
   text-decoration: none;
   color: #0404d9;
 }
-#we_can_help_if p a:active, #about_us section p a:active, #we_can_help_if p a:hover, #about_us section p a:hover, #we_can_help_if li a:active, #about_us section li a:active, #we_can_help_if li a:hover, #about_us section li a:hover {
+#privacy-policy p a:active,
+#cookies-policy p a:active, #we_can_help_if p a:active, #about_us section p a:active, #privacy-policy p a:hover,
+#cookies-policy p a:hover, #we_can_help_if p a:hover, #about_us section p a:hover, #privacy-policy li a:active,
+#cookies-policy li a:active, #we_can_help_if li a:active, #about_us section li a:active, #privacy-policy li a:hover,
+#cookies-policy li a:hover, #we_can_help_if li a:hover, #about_us section li a:hover {
   text-decoration: underline;
+}
+#privacy-policy li > p,
+#cookies-policy li > p, #we_can_help_if li > p, #about_us section li > p {
+  padding-left: 0;
+  padding-right: 0;
 }
 
 a.show,
@@ -223,7 +239,7 @@ body > section h2 {
   }
 }
 
-body > section:nth-child(1) > nav {
+body > section:nth-of-type(1) > nav {
   margin-top: 0;
   font-size: 16px;
   text-align: center;
@@ -232,14 +248,14 @@ body > section:nth-child(1) > nav {
   background-color: #ededed;
 }
 @media (min-width: 1225px) {
-  body > section:nth-child(1) > nav {
+  body > section:nth-of-type(1) > nav {
     display: flex;
     align-items: center;
     flex-direction: row;
     padding: 0;
   }
 }
-body > section:nth-child(1) > nav a {
+body > section:nth-of-type(1) > nav a {
   display: inline-block;
   margin-top: 4px;
   margin-bottom: 4px;
@@ -252,10 +268,10 @@ body > section:nth-child(1) > nav a {
   box-shadow: inset 0 0 0 0 rgba(0, 0, 0, 0);
   border-radius: 2.4px;
 }
-body > section:nth-child(1) > nav a:hover, body > section:nth-child(1) > nav a:active {
+body > section:nth-of-type(1) > nav a:hover, body > section:nth-of-type(1) > nav a:active {
   box-shadow: inset 0 0 4px 0 rgba(0, 0, 0, 0.75);
 }
-body > section:nth-child(1) > nav p {
+body > section:nth-of-type(1) > nav p {
   padding: 2.4px;
   padding-top: 6.4px;
   font-weight: bold;
@@ -264,12 +280,12 @@ body > section:nth-child(1) > nav p {
   color: #c70000;
 }
 @media (min-width: 512px) {
-  body > section:nth-child(1) > nav p {
+  body > section:nth-of-type(1) > nav p {
     font-size: 20px;
   }
 }
 @media (min-width: 1225px) {
-  body > section:nth-child(1) > nav p {
+  body > section:nth-of-type(1) > nav p {
     padding: 8px;
     text-align: right;
     flex-grow: 1;
@@ -755,6 +771,27 @@ header img {
   }
 }
 
+#privacy-policy,
+#cookies-policy {
+  background-color: white;
+}
+#privacy-policy h2:first-child,
+#cookies-policy h2:first-child {
+  width: 210px;
+}
+#privacy-policy h3,
+#cookies-policy h3 {
+  padding-left: 17px;
+  font-size: 1.5em;
+}
+#privacy-policy h4,
+#cookies-policy h4 {
+  font-size: 1.2em;
+  font-style: italic;
+  text-align: center;
+  margin: 15px;
+}
+
 footer {
   background-color: #000;
   color: #97aaba;
@@ -853,6 +890,62 @@ footer nav a:hover svg, footer nav a:active svg {
   }
   footer nav a:hover svg, footer nav a:active svg {
     fill: #000;
+  }
+}
+
+aside {
+  background-color: #420808;
+  padding: 8px 4px;
+  position: sticky;
+  width: 100%;
+  bottom: 0;
+  z-index: 3;
+  text-align: center;
+}
+aside p {
+  margin: 0;
+}
+aside nav {
+  margin: 7px;
+}
+aside nav a {
+  text-decoration: none;
+  box-shadow: 0px 0px 0px 1px white;
+  border-radius: 5px;
+  margin: 2px 5px;
+  padding: 2px 4px;
+  display: inline-block;
+}
+aside nav a:hover {
+  border-width: 3px;
+  box-shadow: 0px 0px 0px 2px white;
+}
+aside nav a:last-child {
+  padding: 0 4px;
+  margin-left: 10px;
+  border-radius: 30px;
+}
+aside p, aside nav a {
+  color: #fff;
+}
+aside.hide {
+  opacity: 0;
+  transform: scale(0.97);
+  transform-origin: bottom center;
+  pointer-events: none;
+}
+@media (min-width: 750px) {
+  aside {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  aside nav {
+    margin: 0;
+  }
+  aside nav a {
+    margin-top: 0;
+    margin-bottom: 0;
   }
 }
 

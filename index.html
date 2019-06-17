@@ -89,12 +89,28 @@ function ScrollPosit() {
         element.classList.remove('not-scrolled');
     }
 }
+
+function SetupPolicy() {
+    document.getElementById("policy").style.position = "fixed";
+}
+
+function PolicyHideOnScroll() {
+    var element = document.getElementById("policy");
+    var position = window.pageYOffset;
+    if (position > 200 || element.classList.contains('closed')) {
+        element.classList.add('hide');
+    } else {
+        element.classList.remove('hide');
+    }
+}
+
+function PolicyHide() { document.getElementById("policy").classList.add('closed') }
     </script>
   </head>
   <body>
     <section class="colour-block top">
       <nav>
-        <nav><a href="#what_we_do">What We Do</a><a href="#about_us">About Us</a><a href="#we_can_help_if">How We Can Help</a><a href="#why_choose_us">Why Choose Us</a><a href="#contact">Contact</a></nav>
+        <nav><a href="index.html#home">Home</a><a href="index.html#what_we_do">What We Do</a><a href="index.html#about_us">About Us</a><a href="index.html#we_can_help_if">How We Can Help</a><a href="index.html#why_choose_us">Why Choose Us</a><a href="index.html#contact">Contact</a></nav>
         <p>Book your free telephone consultation - 01323 332543</p>
       </nav>
       <header id="home">
@@ -136,7 +152,7 @@ function ScrollPosit() {
                               Sadly there are situations where people become unable to make decisions about their own affairs. not only due to old age and dementia but also as a result of accident, illness or some other mental incapacity. This can happen at any age. In some instances
                               people can make some decisions but need help with others. A lasting Power of Attorney (LPA) is needed in these situations.
                             </p>
-                            <p>There are two types of LPA, Property and Financial Affairs and a Health and Welfare. Both allow someone to manage your affairs should you no longer be able to.</p>
+                            <p>There are two types of LPA, Property and Financial Affairs and a Health and Welfare. Both allow someone (your attorney) to manage your affairs should you no longer be able to.</p>
                             <p>
                               A little forward planning in setting up an LPA can avoid costly and time consuming court proceedings resulting in considerable stress and expense. Even essential, everyday transactions such as the use of a joint bank account can become impossible without
                               an appropriate LPA should incapcity occur. Contact us about the two types of LPAs and how they can help protect you and your loved ones.
@@ -199,11 +215,8 @@ function ScrollPosit() {
       <section id="scroll">
         <section><img src="private/images/svg/logo.svg">
           <p>
-            you need to apply to become a 
-            deputy 
-            for an elderly relative who has lost the ability to manage their affairs and who didn't register a Lasting Power or an Enduring Power of Attorney.
-            Your relative may also need a 
-            Statutory Will.
+            you need to apply to become a deputy for an elderly relative who has lost the ability to manage their affairs and who didn't register a Lasting Power of Attorney.
+            Your relative may also need a Statutory Will
           </p>
         </section>
         <section><img src="private/images/svg/logo.svg">
@@ -443,9 +456,15 @@ function ScrollPosit() {
       <p>Regestered in England at 2 Upperton Gardens, Eastbourne, East Sussex BN21 2AH. </p>
       <p>Designed by <a href="https://efunb.com/">Ethan Brierley</a></p>
     </footer>
+    <aside id="policy">
+      <p>This site uses cookies to provide the best experience possible.</p>
+      <nav><a href="cookies-policy.html">Cookie policy</a><a href="privacy-policy.html">Privacy policy</a><a href="javascript:PolicyHide();">&times;</a></nav>
+    </aside>
     <script>
       HideAll();
+      SetupPolicy();
       setInterval(ScrollPosit, 500);
+      setInterval(PolicyHideOnScroll, 500);
     </script>
   </body>
 </html>

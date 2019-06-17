@@ -66,3 +66,19 @@ function ScrollPosit() {
         element.classList.remove('not-scrolled');
     }
 }
+
+function SetupPolicy() {
+    document.getElementById("policy").style.position = "fixed";
+}
+
+function PolicyHideOnScroll() {
+    var element = document.getElementById("policy");
+    var position = window.pageYOffset;
+    if (position > 200 || element.classList.contains('closed')) {
+        element.classList.add('hide');
+    } else {
+        element.classList.remove('hide');
+    }
+}
+
+function PolicyHide() { document.getElementById("policy").classList.add('closed') }

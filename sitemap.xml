@@ -6,4 +6,12 @@
         <loc>https://goldcrestlegal.co.uk/</loc>
         <changefreq>weekly</changefreq>
     </url>
+    <url>
+        <loc>https://goldcrestlegal.co.uk/privacy-policy.html</loc>
+        <changefreq>weekly</changefreq>
+    </url>
+    <url>
+        <loc>https://goldcrestlegal.co.uk/cookies-policy.html</loc>
+        <changefreq>weekly</changefreq>
+    </url>
 </urlset>
