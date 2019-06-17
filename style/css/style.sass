@@ -72,6 +72,10 @@ $text-black: #2a2a2a
             &:active,
             &:hover
                 text-decoration: underline
+    li > p
+        padding:
+            left: 0
+            right: 0
 
 $button-border-colour: #252525
 $button-background: rgb(196, 196, 196)
@@ -190,8 +194,9 @@ body > section
             h2
                 width: 240px
 
+
 $nav_layout_break: 1225px
-body > section:nth-child(1) > nav
+body > section:nth-of-type(1) > nav
     @extend %section_sizing
     margin-top: 0
     font-size: 16px
@@ -624,6 +629,23 @@ $heigth-of-scroll-for-more: 35px
                 section
                     +contact_positioning(1)
 
+#privacy-policy,
+#cookies-policy
+    @extend %section_sizing
+    @extend %text-artical
+    background-color: white
+    h2:first-child
+        width: 210px
+    h3
+        padding-left: 17px
+        font-size: 1.5em
+    h4
+        font:
+            size: 1.2em
+            style: italic
+        text-align: center
+        margin: 15px
+
 $social-icon-colour: #131318
 footer
     background-color: #000
@@ -710,6 +732,52 @@ footer
                         border-radius: 0 7px 7px 0
                     svg
                         fill: #000
+
+aside
+    @extend %nice_transition
+    background-color: #420808
+    padding: 8px 4px
+    position: sticky
+    width: 100%
+    bottom: 0
+    z-index: 3
+    text-align: center
+    p
+        margin: 0
+    nav
+        margin: 7px
+        a
+            @extend %nice_transition
+            text-decoration: none
+            box-shadow: 0px 0px 0px 1px rgba(255,255,255,1)
+            border-radius: 5px
+            margin: 2px 5px
+            padding: 2px 4px
+            display: inline-block
+            &:hover
+                border-width: 3px
+                box-shadow: 0px 0px 0px 2px rgba(255,255,255,1)
+            &:last-child
+                padding: 0 4px
+                margin-left: 10px
+                border-radius: 30px
+    p, nav a
+        color: #fff
+    &.hide
+        opacity: 0
+        transform: scale(0.97)
+        transform-origin: bottom center
+        pointer-events: none
+    @media(min-width: 750px)
+        display: flex
+        justify-content: space-between
+        align-items: center
+        nav
+            margin: 0
+            a
+                margin:
+                    top: 0
+                    bottom: 0
 
 section.colour-block
     &.top
