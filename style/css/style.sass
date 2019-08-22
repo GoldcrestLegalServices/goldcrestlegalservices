@@ -509,34 +509,49 @@ $heigth-of-scroll-for-more: 35px
             p
                 font-size: 14.4px
 
+$quotation-size: 25px
+$quotation-fix-position: $quotation-size * -0.5
+$quotation-hover-position: $quotation-fix-position + 1.5px
 #testimonials
     +section_sizing
     > div
         @extend %wrapped_flex
         justify-content: space-evenly
+        align-items: flex-start
         margin: 20px
         article
+            @extend %nice_transition
             position: relative
             margin: 10px
             padding: 10px
+                top: 0
+                bottom: 0
             max-width: 500px
-            h1
-                font-family: 'Yeseva One', cursive
-                color: #555
-                position: absolute
-                font-size: 50px
-                width: 0
-                height: 0
+            transform: rotate(0turn)
+            &:hover svg
+                transform: rotate(0.02turn)
                 &:first-of-type
-                    top: -50px
-                    left: 0
+                    top: $quotation-hover-position
+                    left: $quotation-hover-position
                 &:last-of-type
-                    bottom: 0
-                    right: 0
+                    bottom: $quotation-hover-position
+                    right: $quotation-hover-position
+            svg
+                @extend %nice_transition
+                position: absolute
+                fill: #555
+                width: $quotation-size
+                height: $quotation-size
+                &:first-of-type
+                    top: $quotation-fix-position
+                    left: $quotation-fix-position
+                &:last-of-type
+                    bottom: $quotation-fix-position
+                    right: $quotation-fix-position
             p
                 &:first-of-type
-                    text-align: left
                     font-family: 'Handlee', cursive
+                    text-align: left
                     font-size: 1.3em
                 &:last-of-type
                     text-align: right

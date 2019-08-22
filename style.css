@@ -31,7 +31,7 @@
   }
 }
 
-aside nav a, aside, footer p a, #we_can_help_if > section > div div, #we_can_help_if > section > div, #we_can_help_if > section > section img, #what_we_do > div article, body > section:nth-of-type(1) > nav a, a.show,
+aside nav a, aside, footer p a, #testimonials > div article svg, #testimonials > div article, #we_can_help_if > section > div div, #we_can_help_if > section > div, #we_can_help_if > section > section img, #what_we_do > div article, body > section:nth-of-type(1) > nav a, a.show,
 a.hide {
   transition: 0.5s;
   transition-timing-function: ease-out;
@@ -637,33 +637,46 @@ header img {
 }
 #testimonials > div {
   justify-content: space-evenly;
+  align-items: flex-start;
   margin: 20px;
 }
 #testimonials > div article {
   position: relative;
   margin: 10px;
   padding: 10px;
+  padding-top: 0;
+  padding-bottom: 0;
   max-width: 500px;
+  transform: rotate(0turn);
 }
-#testimonials > div article h1 {
-  font-family: "Yeseva One", cursive;
-  color: #555;
+#testimonials > div article:hover svg {
+  transform: rotate(0.02turn);
+}
+#testimonials > div article:hover svg:first-of-type {
+  top: -11px;
+  left: -11px;
+}
+#testimonials > div article:hover svg:last-of-type {
+  bottom: -11px;
+  right: -11px;
+}
+#testimonials > div article svg {
   position: absolute;
-  font-size: 50px;
-  width: 0;
-  height: 0;
+  fill: #555;
+  width: 25px;
+  height: 25px;
 }
-#testimonials > div article h1:first-of-type {
-  top: -50px;
-  left: 0;
+#testimonials > div article svg:first-of-type {
+  top: -12.5px;
+  left: -12.5px;
 }
-#testimonials > div article h1:last-of-type {
-  bottom: 0;
-  right: 0;
+#testimonials > div article svg:last-of-type {
+  bottom: -12.5px;
+  right: -12.5px;
 }
 #testimonials > div article p:first-of-type {
-  text-align: left;
   font-family: "Handlee", cursive;
+  text-align: left;
   font-size: 1.3em;
 }
 #testimonials > div article p:last-of-type {
