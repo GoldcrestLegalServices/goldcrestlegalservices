@@ -616,6 +616,7 @@ header img {
 
 #testimonials {
   max-width: 100%;
+  padding-bottom: 8px;
 }
 @media (min-width: 696px) {
   #testimonials {
