@@ -158,7 +158,6 @@ a.show {
   transform: translateY(-15px) rotateX(90deg);
   transform-origin: 50% 0;
   overflow: hidden;
-  filter: url("private/images/svg/defs/blur_animation.svg#blur_5");
 }
 #show_hide_5 p > span, #show_hide_4 p > span, #show_hide_3 p > span, #show_hide_2 p > span, #show_hide_1 p > span {
   display: list-item;
@@ -167,12 +166,6 @@ a.show {
   margin-left: 20px;
 }
 @keyframes jump_in {
-  40% {
-    filter: url("private/images/svg/defs/blur_animation.svg#blur_3");
-  }
-  80% {
-    filter: url("private/images/svg/defs/blur_animation.svg#blur_1");
-  }
   100% {
     color: #2a2a2a;
     transform: translateY(0);
