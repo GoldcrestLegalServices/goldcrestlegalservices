@@ -230,6 +230,9 @@ body > section h2 {
   body > section#why_choose_us h2, body > section#we_can_help_if h2 {
     width: 240px;
   }
+  body > section#testimonials h2 {
+    width: 280px;
+  }
 }
 
 body > section:nth-of-type(1) > nav {

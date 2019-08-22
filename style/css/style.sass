@@ -175,6 +175,9 @@ body
 body > svg
     display: none
 
+=header-width($width)
+    h2
+        width: $width
 body > section
     background-color: $light-grey-background
     h2
@@ -187,13 +190,12 @@ body > section
             top: 5.6px
             bottom: 5.6px
     @media(min-width: 400px)
-        h2
-            width: 160px
+        +header-width(160px)
         &#why_choose_us,
         &#we_can_help_if
-            h2
-                width: 240px
-
+            +header-width(240px)
+        &#testimonials
+            +header-width(280px)
 
 $nav_layout_break: 1225px
 body > section:nth-of-type(1) > nav
