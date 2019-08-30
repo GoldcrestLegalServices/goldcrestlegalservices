@@ -650,27 +650,27 @@ header img {
   transform: rotate(0.02turn);
 }
 #testimonials > div article:hover svg:first-of-type {
-  top: -11px;
-  left: -11px;
+  top: -8.5px;
+  left: -8.5px;
 }
 #testimonials > div article:hover svg:last-of-type {
-  bottom: -11px;
-  right: -11px;
+  bottom: -8.5px;
+  right: -8.5px;
 }
 #testimonials > div article svg {
   position: absolute;
   fill: #555;
   transform: rotate(0.001turn);
-  width: 25px;
-  height: 25px;
+  width: 20px;
+  height: 20px;
 }
 #testimonials > div article svg:first-of-type {
-  top: -12.5px;
-  left: -12.5px;
+  top: -10px;
+  left: -10px;
 }
 #testimonials > div article svg:last-of-type {
-  bottom: -12.5px;
-  right: -12.5px;
+  bottom: -10px;
+  right: -10px;
 }
 #testimonials > div article p:first-of-type {
   font-family: "Handlee", cursive;
