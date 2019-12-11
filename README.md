@@ -1,6 +1,12 @@
 # Goldcrest Legal Services Web
 
+<img align="right" width="135" src="private/images/icon.ico">
+
+[https://goldcrestlegal.co.uk/](https://goldcrestlegal.co.uk/)
+
 ## How to compile
+
+I designed this before I understood more standard build scripts, so you will have to contend with my less standard build process. 
 
 ### Install
 
