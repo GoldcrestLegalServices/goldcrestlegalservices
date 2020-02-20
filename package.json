@@ -1,0 +1,25 @@
+{
+  "name": "goldcrestlegalservices.github.io",
+  "version": "1.0.0",
+  "description": "<img align=\"right\" width=\"135\" src=\"private/images/icon.ico\">",
+  "main": "index.html",
+  "scripts": {
+    "build": "sass style/css: && pug index.pug privacy-policy.pug cookies-policy.pug -P",
+    "build:min": "sass style/css: --style compressed && pug index.pug privacy-policy.pug cookies-policy.pug && html-minifier index.html -o index.html --collapseBooleanAttributes --removeComments --preserveLineBreaks --minify-css true --minify-js true --maxLineLength 100"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GoldcrestLegalServices/goldcrestlegalservices.github.io.git"
+  },
+  "author": "",
+  "bugs": {
+    "url": "https://github.com/GoldcrestLegalServices/goldcrestlegalservices.github.io/issues"
+  },
+  "homepage": "https://github.com/GoldcrestLegalServices/goldcrestlegalservices.github.io#readme",
+  "devDependencies": {
+    "html-minifier": "^4.0.0",
+    "pug": "^2.0.4",
+    "pug-cli": "^1.0.0-alpha6",
+    "sass": "^1.25.0"
+  }
+}
